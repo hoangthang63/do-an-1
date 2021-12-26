@@ -1,5 +1,5 @@
 <div class="duoi" id="duoi">
-    <a href="#" class="logo">Food<span>ie.</span></a>
+    <a href="#" class="logo">K<span>mart.</span></a>
     <br>
     <ul>
         <li><a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a></li>
