@@ -4,46 +4,44 @@ include "leftside.php";
 
 
 ?>
-
+        <?php
+        $ket_noi = mysqli_connect('localhost','root','','doan1');
+        $sql = "select * from nha_san_xuat";
+        mysqli_set_charset($ket_noi,'utf8');
+        $ket_qua = mysqli_query($ket_noi,$sql);                
+        ?>
 <div class="admin-content-right">
     <div class="product-add-content">
         <h2>Thêm Sản phẩm <span style="color: red;">*</span></h2><br>
-        <form action="productadd.php" method="POST" enctype="multipart/form-data">
+        <form action="productaddprocces.php" method="POST" enctype="multipart/form-data">
             <label for="">Tên sản phẩm<span style="color: red;">*</span></label> <br>
-            <input required type="text" name="sanpham_tieude"> <br>
-            <label for="">Mã sản phẩm<span style="color: red;">*</span></label> <br>
-            <input required type="text" name="sanpham_ma"> <br>
+            <input type="text" name="ten"> <br>
+      
             <label for="">Chọn danh mục<span style="color: red;">*</span></label> <br>
-            <select required="required" name="cartegory_id" id="cartegory_id">
+            <select required="required" name="danh_muc" id="cartegory_id">
                 <option value="">--Chọn--</option>
                 
-                <option value=""></option>
+                <option value="">adsa</option>
                 
             </select>
-            <label for="">Chọn Loại sản phẩm<span style="color: red;">*</span></label> <br>
-            <select required="required" name="brand_id" id="brand_id">
-                <option value="">--Chọn--</option>
-            </select>
+      
             <label for="">Chọn Nhà xuất bản<span style="color: red;">*</span></label> <br>
-            <select required="required" name="nhaxuatban_id" id="nhaxuatban_id">
+            <select name="nha_san_xuat" id="nhaxuatban_id">
                 <option value="">--Chọn--</option>
                 
-                <option value=""></option>
-                <
+              <?php foreach ($ket_qua as $tung_san_pham){?>
+                    <option><?php 
+                    echo $tung_san_pham['ten'] ?></option>
+                <?php }?>
+                
             </select>
-            <!-- <label for="">Chọn trạng thái sản phẩm<span style="color: red;">*</span></label> <br>
-            <div class="sanpham-  size">
-                <p>Sách Khuyễn Mãi</p> <input type="checkbox" name="sanpham-size[]" value="S">
-                <p>Sách Cũ</p> <input type="checkbox" name="sanpham-size[]" value="M">
-                <p>Sách bán Lại</p> <input type="checkbox" name="sanpham-size[]" value="L">
 
-            </div> -->
             <label for="">Giá sản phẩm<span style="color: red;">*</span></label> <br>
-            <input required type="text" name="sanpham_gia"> <br>
-            <label for="">Chi tiết<span style="color: red;">*</span></label> <br>
-            <textarea class="ckeditor" required name="sanpham_chitiet" cols="60" rows="5"></textarea><br>
+            <input required type="text" name="gia"> <br>
+            <label for="">Mô tả<span style="color: red;">*</span></label> <br>
+            <textarea class="ckeditor" required name="mo_ta" cols="60" rows="5"></textarea><br>
             <label for="">Ảnh Sản phẩm<span style="color: red;">*</span></label> <br>
-            <input required type="file" name="sanpham_anh"> <br>
+            <input required type="text" name="anh"> <br>
             <span style="color: red;"></span>
             <button class="admin-btn" name="submit" type="submit">Thêm Sản phẩm</button>
         </form>

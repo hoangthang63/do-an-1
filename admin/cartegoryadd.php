@@ -11,9 +11,9 @@ include "leftside.php";
     <div class="admin-content-right">
         <!-- <h1>Thêm sản phẩm</h1><br> -->
         <div class="cartegory-add-content">
-            <form action="" method="POST">
+            <form action="cartegoryaddprocse.php" method="POST">
                 <label for="">Vui lòng chọn danh mục<span style="color: red;">*</span></label><br>
-                <input name="cartegory_name" type="text" placeholder="Nhập tên danh mục">
+                <input name="ten" type="text" placeholder="Nhập tên danh mục">
                 <button class="admin-btn" type="submit">Thêm</button>
             </form>
         </div>
@@ -23,4 +23,3 @@ include "leftside.php";
     <script src="script.js"></script>
 </body>
 
-</html>
