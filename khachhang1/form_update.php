@@ -24,13 +24,13 @@
         <textarea name="mo_ta"><?php echo $san_pham['mo_ta']?></textarea>
         <br>
         Giá
-        <input type="number" name="gia" value="<?php echo $san_pham['gia']?>>
+        <input type="number" name="gia" value="<?php echo $san_pham['gia']?>">
         <br>
         Link ảnh
-        <input type="text" name="anh" value="<?php echo $san_pham['anh']?>>
+        <input type="text" name="anh" value="<?php echo $san_pham['anh']?>">
         <br>
         Mã nhà sản xuất
-        <input type="text" name="ma_nha_san_xuat" value="<?php echo $san_pham['ma_nha_san_xuat']?>>
+        <input type="text" name="ma_nha_san_xuat" value="<?php echo $san_pham['ma_nha_san_xuat']?>">
         <br>
         <button>Thêm</button>
     </form>

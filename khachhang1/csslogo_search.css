@@ -1,0 +1,74 @@
+#tren{
+	width : 100% ;
+	height :70px ;
+	background : #333333;
+}
+#tren >.logo{
+	width : 25% ;
+	height :100% ;
+	
+	float: left;
+
+}
+#tren >.logo >img{
+	display: block;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height: 70%;
+}
+
+#tren >.timkiem{
+	width : 45% ;
+	height :100% ;
+	float : left;
+
+}
+.timkiem input[type=text]{
+	width: 70%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color:white ;
+	padding: 12px 20px 12px 40px;
+	display: block;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#tren >.dang_nhap{
+	width : 30% ;
+	height :100% ;
+	
+	float : left;
+}
+#tren >.dang_nhap >.dangnhap{
+	float: left;
+	width:  40%;
+	height: 100% ;
+	
+}
+
+#tren >.dang_nhap >.dang_ky {
+	float: left;
+	width:  12%;
+	height: 100% ;
+	
+}
+#tren >.dang_nhap >.Gio_hang{
+	float: left;
+	width:  12%;
+	height: 100% ;
+	
+}
+a > img{
+	display: block;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: 10px;
+	
+}

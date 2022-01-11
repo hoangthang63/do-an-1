@@ -4,20 +4,19 @@ include "leftside.php";
 
 ?>
 
-
-
 <body>
-
     <div class="admin-content-right">
-
+       
         <div class="cartegory-add-content">
             <h1>Thêm Nhà xuất bản<span style="color: red;">*</span></h1><br>
-            <form action="" method="POST">
+            <form action="NSXproces_insert.php" method="post">
+                Mã nhà sản xuất
+                <br>
+                <input type="text" name="ma" placeholder="Nhập mã">
+                <br>
                 <label for="">Tên nhà xuất bản<span style="color: red;">*</span></label><br>
-                <input name="nhaxuatban_ten" type="text" placeholder="Nhập tên">
+                <input type="text" name="ten" placeholder="Nhập tên">
                 <br> <br>
-                <!-- <label for="">Logo minh họa<span style="color: red;">*</span></label><br>
-                <input name="brand_name" type="file" placeholder="Nhập tên danh mục"> -->
                 <button class="admin-btn" type="submit">Thêm</button>
             </form>
         </div>
@@ -25,5 +24,5 @@ include "leftside.php";
     </section>
     <script src="script.js"></script>
 </body>
-
+    
 </html>
