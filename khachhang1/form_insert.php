@@ -20,6 +20,9 @@
 	Mã nhà sản xuất
 	<input type="text" name="ma_nha_san_xuat">
 	<br>
+	Danh mục
+	<input type="text" name="danh_muc">
+	<br>
 	<button>Thêm</button>
 </form>
 </body>

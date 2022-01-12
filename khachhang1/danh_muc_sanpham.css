@@ -10,18 +10,18 @@
 #danh_muc >.le_trai{
 	height: 100%;
 	width: 5%;
-	float: left;
+	float: left;	
 }
 #danh_muc ul{
 	margin: 0px;
 	height: 100%;
 	list-style-type: none;
-	padding: 0;
-
+	padding-left: 350px;
 }
 #danh_muc ul > li {
 
 	float: left;
+
 }
 #danh_muc ul li{
 

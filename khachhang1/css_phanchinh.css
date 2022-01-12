@@ -1,6 +1,6 @@
 	#giua{
 		width: 100%;
-		height :2000px;
+		height :2200px;
 	}
 	#giua{
 		background: #EEEEEE;	
@@ -8,7 +8,6 @@
 	#giua >.vien_trai{
 		width:  10%;
 		height: 100%;
-		background :;
 		float : left ;
 
 	}
@@ -74,11 +73,11 @@
 	}
 	a>.name{
 		color: black;
-		align: center;
+		text-align: center;
 		width: 100%;
 		font-weight: 700;
 		text-align: center;
-		align: center;
+		text-align: center;
 		margin-top:10px;
 
 
