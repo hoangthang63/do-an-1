@@ -10,12 +10,12 @@
 			</div>
 			<div class="dang_nhap" >
 				<div class="dangnhap">
-					<a href="#" >
+					<a href="#">
 						<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" >
 					</a>
 				</div>
 				<div class="dang_ky">
-					<a href="#" >
+					<a href="signup.php" >
 						<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-128.png" height="35" >
 					</a>
 				</div>
