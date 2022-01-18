@@ -1,7 +1,7 @@
 <?php
 $ma = $_GET['ma'];
 
-require_once 'connect.php';
+require_once '../connect.php';
 
 $truy_van = "delete from san_pham where ma = $ma";
 

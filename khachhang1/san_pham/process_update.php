@@ -6,7 +6,7 @@ $gia = $_POST['gia'];
 $anh = $_POST['anh'];
 $ma_nha_san_xuat = $_POST['ma_nha_san_xuat'];
 
-include 'connect.php';
+include '../connect.php';
 
 $truy_van = "update san_pham
 set

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
     </title>
-    <link rel="stylesheet" type="text/css" href="csslogo_search.css">
-    <link rel="stylesheet" type="text/css" href="danh_muc_sanpham.css">
-    <link rel="stylesheet" type="text/css" href="css_phanchinh.css">
-    <link rel="stylesheet" type="text/css" href="css_thong_tin_duoi.css">
+    <link rel="stylesheet" type="text/css" href="san_pham/csslogo_search.css">
+    <link rel="stylesheet" type="text/css" href="san_pham/danh_muc_sanpham.css">
+    <link rel="stylesheet" type="text/css" href="san_pham/css_phanchinh.css">
+    <link rel="stylesheet" type="text/css" href="san_pham/css_thong_tin_duoi.css">
     <style type="text/css">
         #tong 
         {
@@ -22,8 +22,8 @@
 <body>
     <div id="tong">
 
-        <?php include 'search_sign.php' ?>
-        <?php include 'danh_muc.php' ?>
+        <?php include 'san_pham/search_sign.php' ?>
+        <?php include 'san_pham/danh_muc.php' ?>
         <div id="giua">
             <div class="vien_trai"></div>
 
@@ -49,7 +49,7 @@
                     <?php foreach ($ket_qua as $tung_san_pham) { ?>
 
                         <div class="mat_hang">
-                            <a href="sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                            <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                                 <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
@@ -81,7 +81,7 @@
                     <?php foreach ($ket_qua as $tung_san_pham) { ?>
 
                         <div class="mat_hang">
-                            <a href="sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                            <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                                 <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
@@ -113,7 +113,7 @@
                     <?php foreach ($ket_qua as $tung_san_pham) { ?>
 
                         <div class="mat_hang">
-                            <a href="sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                            <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                                 <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
@@ -145,7 +145,7 @@
                     <?php foreach ($ket_qua as $tung_san_pham) { ?>
 
                         <div class="mat_hang">
-                            <a href="sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                            <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                                 <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
@@ -177,7 +177,7 @@
                     <?php foreach ($ket_qua as $tung_san_pham) { ?>
 
                         <div class="mat_hang">
-                            <a href="sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                            <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                                 <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>

@@ -9,7 +9,7 @@
     <?php
     $ma = $_GET['ma'];
 
-    require_once 'connect.php';
+    require_once '../connect.php';
     $sql = "select * from san_pham";
     $ket_qua = mysqli_query($ket_noi, $sql);
     

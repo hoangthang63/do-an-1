@@ -24,7 +24,7 @@
 		<?php 
 
 		include	'danh_muc.php';
-		require 'connect.php';
+		require '../connect.php';
 		$ma = $_GET['ma'] ;
 		$sql = "select * from san_pham
 		where ma = $ma";
@@ -74,7 +74,7 @@
 			<div class="vien_phai"></div>
 		</div> 
 		
-		<?php include 'footer.php' ?> 
+		<?php include '../footer.php' ?> 
 		<?php mysqli_close($ket_noi	); 	 ?>
 	</div>
 </body>

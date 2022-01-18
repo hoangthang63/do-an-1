@@ -1,7 +1,7 @@
 <div id="tren">
 			<div class="logo">
-				<a href="index.php">
-				<h1 align="center">LOGO</h1></a>
+				<a href="../khachhang1/index.php">
+				<h1 text-align="center">LOGO</h1></a>
 			</div>
 			<div class="timkiem">
 				<form>
@@ -10,12 +10,12 @@
 			</div>
 			<div class="dang_nhap" >
 				<div class="dangnhap">
-					<a href="#">
+					<a href="signing/signin.php">
 						<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" >
 					</a>
 				</div>
 				<div class="dang_ky">
-					<a href="signup.php" >
+					<a href="signing/signup.php" >
 						<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-128.png" height="35" >
 					</a>
 				</div>
