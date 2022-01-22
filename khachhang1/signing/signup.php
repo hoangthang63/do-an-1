@@ -8,9 +8,11 @@
 </head>
 <body>
 <?php
-    if(isset($_GET['error']))
+session_start();
+    if(isset($_SESSION['error']))
     {
-        echo $_GET['error'];
+        echo $_SESSION['error'];
+        unset($_SESSION['error']);
     }
 ?>
     <form method="POST" action="process_signup.php">

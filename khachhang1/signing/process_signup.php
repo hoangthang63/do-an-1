@@ -10,7 +10,10 @@ $result = mysqli_query($ket_noi,$sql);
 $number_rows = mysqli_fetch_array($result)['count(*)'];
 
 if($number_rows == 1){
-    header('location:signup.php?error=Email này đã được đăng ký');
+
+    session_start();
+    $_SESSION['error'] = "Email này đã được đăng ký";
+    header('location:signup.php');
     exit;
 }
 
