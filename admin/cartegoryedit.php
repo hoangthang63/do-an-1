@@ -8,7 +8,7 @@ include "leftside.php";
 
 <body>
 <?php 
-require 'connect.php';
+require '../connect.php';
 $ma = $_GET['ma'];
 
 $sql = "select * from danh_muc where ma = '$ma'";

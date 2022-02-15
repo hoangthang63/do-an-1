@@ -1,0 +1,76 @@
+#danh_muc {
+	width: 100%;
+	height: 60px;
+	background-color: yellowgreen;
+	color: black;
+}
+
+
+
+#danh_muc >.le_trai{
+	height: 100%;
+	width: 3%;
+	float: left;
+}
+#danh_muc ul{
+	margin: 0px;
+	height: 100%;
+	list-style-type: none;
+	padding: 0;
+
+}
+#danh_muc ul > li {
+	float: left;
+}
+#danh_muc ul li{
+	position: relative;
+	display: inline-block;
+	width: 10%;
+	margin: 0px;
+	height: 100% ;
+	background:yellowgreen;
+}
+
+#danh_muc ul >li >ul{
+	display:none;
+	background:white;
+	margin-top: 3px;
+	width: 150px;
+}
+#danh_muc ul >li > ul >li{
+	width: 100%;
+	background: white;
+	height: 200px;
+	width: 150px;
+	text-align: center;
+} 
+#danh_muc ul >li >ul >li >a {
+
+	margin-left: 10px;
+	margin-right: 10px;
+	color: black;
+	text-align: center;
+}
+
+#danh_muc ul >li:hover ul {
+	display: block ;
+	position: absolute;
+}
+
+#danh_muc >ul > li:hover{
+	background: white;
+
+}
+#danh_muc> ul >li > a{
+	text-align: center;
+	color: black;
+	display: block;
+
+}
+#danh_muc > ul >li > ul >li:hover{
+	background:black;
+	
+}
+#danh_muc > ul >li > ul >li:hover >a{
+	color: white;
+}

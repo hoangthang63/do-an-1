@@ -1,0 +1,111 @@
+.giua{
+	height: 80%;
+	width: 100%;
+
+}
+.mat_hang{
+	height: 270px;
+	width: 75%;
+	background: #bdbdbd;
+	padding: 10px;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+.mat_hang >.anh{
+	width: 45%;
+	height: 100%;
+	float: left;
+	
+
+}
+.mat_hang >.thong_tin{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background: white;
+	margin-left: 10px;
+	
+}
+.mat_hang >.anh img{
+
+width: 100%;
+height: 100%;
+}
+.name{
+		color: black;
+		
+		width: 100%;
+		font-weight: 700;
+		margin-left: 	50px;
+		margin-top:10px;
+
+}
+#giua>.vien_phai{
+	height: 100%;
+	width: 15%;
+	float: left;
+	
+	}
+#giua>.vien_trai{	
+	height: 100%;
+	width: 15%;
+	float: left;
+	}
+#giua>.giua{
+	height: 100%;
+	width: 70%;
+	float: left;
+}
+
+.input-box{
+    margin-bottom: 10px;
+}
+.input-box input{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.btn-box{
+    text-align: right;
+    margin-top: 30px;
+}
+.btn-box button{
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: #009999;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+.input-box{
+    margin-bottom: 10px;
+}
+.input-box input{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.btn-box{
+    text-align: right;
+    margin-top: 30px;
+}
+.btn-box button{
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: #009999;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+.dat_hang{
+	height: 320px;
+	width: 50%;
+	background: whitesmoke;
+	padding: 10px;
+	margin-top: 20px;
+	border-radius: 10px;
+border: solid black;
+margin-bottom: 10px;
+}

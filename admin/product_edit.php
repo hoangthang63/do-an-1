@@ -9,6 +9,9 @@ require 'connect.php' ;
 $ma = $_GET['ma'];
 $sql = "select * from san_pham where ma = '$ma'";
 $ket_qua = mysqli_query($ket_noi,$sql) ;
+$sql1 = "select * from danh_muc";
+$ket_quadanhmuc = mysqli_query($ket_noi,$sql1) ;
+
 $sql_NSX = "select * from nha_san_xuat";
 $ket_quaNSX = mysqli_query($ket_noi,$sql_NSX);
 $truy_van = mysqli_fetch_array($ket_qua); ?>
@@ -22,7 +25,12 @@ $truy_van = mysqli_fetch_array($ket_qua); ?>
             <label for="">Chọn danh mục<span style="color: red;">*</span></label> <br>
             <select required="required" name="danh_muc" id="cartegory_id">
                 <option value=""><?php echo $truy_van['danh_muc'] ?></option>
-                <option value="">Dan muc</option>
+                  
+              <?php foreach ($ket_quadanhmuc as $tung_san_pham){?>
+                    <option><?php 
+                    
+                    echo $tung_san_pham['ten'] ;?></option>
+                <?php }?>
             </select>
             <label for="">Chọn Nhà sản xuất<span style="color: red;">*</span></label> <br>
              <select name="nha_san_xuat" id="nhaxuatban_id">
@@ -30,7 +38,7 @@ $truy_van = mysqli_fetch_array($ket_qua); ?>
                 
               <?php foreach ($ket_quaNSX as $tung_san_pham){?>
                     <option><?php 
-                    echo '1';
+                
                     echo $tung_san_pham['ten'] ;?></option>
                 <?php }?>
                 

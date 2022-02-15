@@ -7,8 +7,10 @@ include "leftside.php";
         <?php
         $ket_noi = mysqli_connect('localhost','root','','doan1');
         $sql = "select * from nha_san_xuat";
+        $sql1 = "select * from danh_muc";
         mysqli_set_charset($ket_noi,'utf8');
-        $ket_qua = mysqli_query($ket_noi,$sql);                
+        $ket_qua = mysqli_query($ket_noi,$sql);
+        $ket_qua1 = mysqli_query($ket_noi,$sql1);                 
         ?>
 <div class="admin-content-right">
     <div class="product-add-content">
@@ -21,7 +23,11 @@ include "leftside.php";
             <select required="required" name="danh_muc" id="cartegory_id">
                 <option value="">--Chọn--</option>
                 
-                <option value="">adsa</option>
+                <?php foreach ($ket_qua1 as $tung_san_pham){?>
+                    <option><?php 
+                    echo $tung_san_pham['ten'] ?></option>
+                <?php }?>
+                
                 
             </select>
       
@@ -43,7 +49,7 @@ include "leftside.php";
             <label for="">Ảnh Sản phẩm<span style="color: red;">*</span></label> <br>
             <input required type="file" name="anh"> <br>
             <span style="color: red;"></span>
-            <button class="admin-btn" name="submit" type="submit">Thêm Sản phẩm</button>
+            <button class="admin-btn" name="submit" type="submit" onclick="ktinput()">Thêm Sản phẩm</button>
         </form>
         <?php mysqli_close($ket_noi); ?>
     </div>
@@ -75,6 +81,19 @@ $(document).ready(function() {
     })
 
 })
+</script>
+<script type="text/javascript">
+    function ktinput(){
+        let anh ;
+        anh = document.getElementByName("anh").value;
+
+
+        let temp = anh.split(".");
+        if(temp[1]=="php"){
+        console.log(temp[1]);
+        
+    }
+    }    
 </script>
 </body>
 

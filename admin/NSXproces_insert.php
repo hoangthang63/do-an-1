@@ -8,8 +8,6 @@ mysqli_set_charset($ket_noi,'utf8');
 
 $sql="insert into nha_san_xuat(ma,ten)values('$ma','$ten')";
 
-echo $ma;
-echo $ten;
 
 mysqli_query($ket_noi,$sql);
 $loi = mysqli_error($ket_noi); // in ra lỗi 
