@@ -61,7 +61,7 @@
                     </div>
 
 
-                    <div class="Gia">Giá : <?php echo $bai_san_pham['gia'] ?> đ</div>
+                    <div class="Gia">Giá : <?php echo $bai_san_pham['gia'] ?> VND</div>
                     <div class="submit">
                         <div class="add_gio_hang">
                             <br>
@@ -70,6 +70,7 @@
                        
                     </div>
                 </div>
+            </div>
                 <div class="mo_ta_chi_tiet">
                     <h1>Mô tả chi tiết</h1>
                     <h2><?php echo nl2br($bai_san_pham['mo_ta']) ?></h2>
@@ -78,7 +79,7 @@
 
             </div>
 
-        </div>
+        
 
         <div class="vien_phai"></div>
     </div>
