@@ -54,7 +54,12 @@ $ket_qua = mysqli_query($ket_noi, $sql);
             <?php 
             } ?>
         </table>
-          
+           <?php  for($i=1; $i<=$so_trang ; $i++) { 
+          ?>
+          <a href="?trang=<?php echo $i ?>" style = "color: black; " >
+              <?php echo $i ?>
+          </a>
+      <?php } ?>
     </div><?php mysqli_close($ket_noi); ?>
 </div>
 </section>
