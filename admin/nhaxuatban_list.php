@@ -31,9 +31,10 @@ $ket_qua = mysqli_query($ket_noi, $sql);
                 <th>STT</th>
                 <th>ID</th>
                 <th>Tên nhà xuất bản</th>
-                 <?php if($_SESSION['vi_tri']==1){ ?>
+                 <?php if(isset($_SESSION['vi_tri']) && $_SESSION['vi_tri']==1 ){ ?>
+
                 <th>Tùy chọn</th>
-            }
+            <?php } ?>
             </tr>
 
            <?php $i = 0;
@@ -43,7 +44,8 @@ $ket_qua = mysqli_query($ket_noi, $sql);
                 <td><?php echo $i ?></td>
                 <td><?php echo $tung_san_pham['ma']  ?></td>
                 <td><?php echo $tung_san_pham['ten']  ?></td>
-                 <?php if($_SESSION['vi_tri']==1){ ?>
+             <?php if(isset($_SESSION['vi_tri']) && $_SESSION['vi_tri']==1 ){ ?>
+
                 <td><a href="nhaxuatban_update.php?ma=<?php echo $tung_san_pham['ma'] ?>">Sửa</a>|
                     <a href="delete_NSX.php?ma=<?php echo $tung_san_pham['ma'] ?>">Xóa</a>
                 </td>
@@ -52,16 +54,11 @@ $ket_qua = mysqli_query($ket_noi, $sql);
             <?php 
             } ?>
         </table>
-            <?php  for($i=1; $i<=$so_trang ; $i++) { 
-          ?>
-          <a href="?trang=<?php echo $i ?>" style = "color: black; " >
-              <?php echo $i ?>
-          </a>
-      <?php } ?>
+          
     </div><?php mysqli_close($ket_noi); ?>
 </div>
 </section>
-<script src="../script.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

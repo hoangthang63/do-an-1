@@ -12,8 +12,7 @@ if($vi_tri = 'Nhân Viên'){
 }else{
 $vi_tri = 1;
 }
-echo $gioi_tinh;
-echo $vi_tri;
+
 require 'connect.php';
 $sql = "select count(*) from nhan_vien where email = '$email'";
 $result = mysqli_query($ket_noi,$sql);
@@ -30,4 +29,4 @@ mysqli_query($ket_noi,$sql);
 
 
 mysqli_close($ket_noi);
-// header('location:../index.php?sussecs=Đăng ký thàng công');
+header('location:danh_sach_nhan_vien.php?sussecs=Đăng ký thàng công');

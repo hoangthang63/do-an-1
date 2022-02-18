@@ -21,23 +21,20 @@ $ma = $_GET['ma'];
             <tr>
                 <th>Mã hoá đơn</th>
                 <th>Mã khách hàng</th>
-                <th>Tên </th>
-                <th>Số điện thoại</th>
-                <th>Địa chỉ</th>
-                <th>Ghi chú</th>
+                <th>Người nhận
+                Số điện thoại
+                Địa chỉ
+                Ghi chú</th>
                 <th>Tổng tiền</th>
                 <th>Trạng thái đơn</th>
                 <th></th>
             </tr>
-          
-
-               
                <tr>
                 <td><?php echo $bai_san_pham['ma']  ?></td>
                 <td><?php echo $bai_san_pham['ma_khach_hang'] ?></td>
-                <td><?php echo $bai_san_pham['ten_nguoi_nhan'] ?></td>
-                <td><?php echo $bai_san_pham['sdt_nguoi_nhan'] ?></td>
-                <td><?php echo $bai_san_pham['dia_chi_nhan_hang'] ?></td>
+               <td> <?php echo $bai_san_pham['ten_nguoi_nhan'] ?>
+                <?php echo $bai_san_pham['sdt_nguoi_nhan'] ?>
+                <?php echo $bai_san_pham['dia_chi_nhan_hang'] ?></td>
                 <td><?php echo $bai_san_pham['ghi_chu'] ?> </td>
                 <td><?php echo $bai_san_pham['tong_tien'] ?></td>
                     

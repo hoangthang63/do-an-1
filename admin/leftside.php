@@ -12,7 +12,8 @@
             <li><a href="#"><img style="width:30px" src="icon/options.png" alt="">Danh Mục</a>
                 <ul>
                     <li><a href="cartegory_list.php">Danh sách</a></li>
-                    <?php if($_SESSION['vi_tri']==1){ ?>
+             <?php if(isset($_SESSION['vi_tri']) && $_SESSION['vi_tri']==1 ){ ?>
+
                     <li><a href="cartegoryadd.php">Thêm</a></li>
                 <?php } ?>
                 </ul>
@@ -27,7 +28,8 @@
             <li><a href="#"><img style="width:30px" src="icon/menu.png" alt="">Nhà Xuất Bản</a>
                 <ul>
                     <li><a href="nhaxuatban_list.php">Danh sách</a></li>
-                    <?php if($_SESSION['vi_tri']==1){ ?>
+       <?php if(isset($_SESSION['vi_tri']) && $_SESSION['vi_tri']==1 ){ ?>
+
                     <li><a href="nhaxuatbanadd.php">Thêm</a></li>
                 <?php } ?>
                 </ul>
@@ -38,7 +40,7 @@
                     <li><a href="productadd.php">Thêm</a></li>
                 </ul>
             </li>
- <?php if($_SESSION['vi_tri']==1){ ?>
+ <?php if(isset($_SESSION['vi_tri']) && $_SESSION['vi_tri']==1 ){ ?>
             <li><a href="#"><img style="width:30px" src="icon/qltk.jpg" alt="">quản lý người dùng</a>
                 <ul>
                     <li><a href="qlkhachhang.php">Danh sách</a></li>
@@ -46,7 +48,8 @@
                 </ul>
             </li>
         <?php } ?>
-              <?php if($_SESSION['vi_tri']==1){ ?>
+    <?php if(isset($_SESSION['vi_tri']) && $_SESSION['vi_tri']==1 ){ ?>
+
              <li><a href="#"><img style="width:30px" src="icon/qltk.jpg" alt="">Quản lý nhân viên</a>
                 <ul>
                   
@@ -56,7 +59,7 @@
                 </ul>
             </li>
              <?php } ?> 
-            <li><a href=""> <img style=" width:30px" src="icon/logout.png" alt="">Đăng Xuất</a>
+            <li><a href="../khachhang1/signing/signout.php"> <img style=" width:30px" src="icon/logout.png" alt="">Đăng Xuất</a>
 
             </li>
         </ul>
