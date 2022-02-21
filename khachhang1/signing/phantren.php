@@ -1,0 +1,6 @@
+<div id="tren">
+<div class="logo">
+  <a href="../index.php">
+    <h1 text-align="center"  style="margin-left: 50px ;margin-top: 10px; color: red;">K1.Mark </h1></a>
+  </div>
+</div>

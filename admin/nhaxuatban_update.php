@@ -28,7 +28,7 @@ include "leftside.php";
             </form>
         </div>
     </div>
-    </section>
+    </section><?php mysqli_close($ket_noi); ?>
     <script src="script.js"></script>
 </body>
     

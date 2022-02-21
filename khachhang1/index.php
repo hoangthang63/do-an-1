@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -16,31 +17,80 @@
             width: 100%;
             height: 2510px
         }
+        .timkiem input[class="tim_kiem"] {
+            width: 70%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            padding: 12px 20px 12px 40px;
+            display: block;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        ul >li > ul >li{
+            width: 100%;
+            background: white;
+            height: 200px;
+            width: 150px;
+            text-align: center;
+        } 
     </style>
 </head>
 
 <body>
     <div id="tong">
 
-        <?php include 'san_pham/search_sign.php' ?>
+        <?php include 'search_sign.php' ?>
         <?php include 'san_pham/danh_muc.php' ?>
+        <?php  require_once 'connect.php';  ?>
+        <?php  
+        /*
+    $trang = 1;
+    if(isset($_GET['trang'])){
+        $trang = $_GET['trang'];
+    }
+    $sql_so_danh_muc =  "select count(*) from danh_muc";
+    $mang_so_danh_muc = mysqli_query($ket_noi,$sql_so_danh_muc);
+    $ket_qua_so_danh_muc = mysqli_fetch_array($mang_so_danh_muc);
+    $so_danh_muc = $ket_qua_so_danh_muc['count(*)'];
+    $so_danh_muc_1 = 2 ;
+    $so_trang =  ceil($so_danh_muc/$so_danh_muc_1);
+    $bo_qua = $so_danh_muc_1*($trang - 1);
+    $sql = "select * from danh_muc limit $so_danh_muc_1 offset $bo_qua";
+    $ket_qua = mysqli_query($ket_noi, $sql);
+    */
+    ?>
         <div id="giua">
             <div class="vien_trai"></div>
 
             <div class="giua">
-
+                <?php
+                /*
+            <?php foreach ($ket_qua as $tung_danh_muc) { ?>
+                <?php
+                $temp = $tung_danh_muc['ten'];
+                $sql1 = "select * from san_pham WHERE danh_muc = '$temp' Limit 3;";
+                $ket_qua1 = mysqli_query($ket_noi, $sql1);
+                ?>
+                    <?php } ?>
+                */ ?>
                 <div class="san_pham">
                     <div class="tieu_de">
                         <div class="loai_san_pham">
                             <h1 id="but">Bút</h1>
                         </div>
                         <div class="all">
-                            <a href="#">
+                        <a href="tim_kiem.php?danh_muc=Bút">
                                 <h3>Xem tất cả</h3>
                             </a>
                         </div>
                     </div>
                     <?php
+                    // $temp = $tung_danh_muc['ten'];
                     $ket_noi = mysqli_connect('localhost', 'root', '', 'doan1');
                     $sql = "SELECT * FROM `san_pham` WHERE danh_muc = 'Bút' Limit 3;";
                     mysqli_set_charset($ket_noi, 'utf8');
@@ -60,6 +110,7 @@
                         </div>
 
                     <?php } ?>
+                    
                 </div>
                 <div class="san_pham">
                     <div class="tieu_de">
@@ -67,7 +118,7 @@
                             <h1 id="vo">Vở</h1>
                         </div>
                         <div class="all">
-                            <a href="#">
+                            <a href="tim_kiem.php?danh_muc=Vở">
                                 <h3>Xem tất cả</h3>
                             </a>
                         </div>
@@ -99,7 +150,7 @@
                             <h1 id="may_tinh_bo_tui">Máy tính bỏ túi</h1>
                         </div>
                         <div class="all">
-                            <a href="#">
+                            <a href="tim_kiem.php?danh_muc=Máy tính bỏ túi">
                                 <h3>Xem tất cả</h3>
                             </a>
                         </div>
@@ -131,7 +182,7 @@
                             <h1 id="giay_in_an">Giấy in ấn</h1>
                         </div>
                         <div class="all">
-                            <a href="#">
+                            <a href="tim_kiem.php?danh_muc=Giấy in ấn">
                                 <h3>Xem tất cả</h3>
                             </a>
                         </div>
@@ -163,7 +214,7 @@
                             <h1 id="khac">Khác</h1>
                         </div>
                         <div class="all">
-                            <a href="#">
+                            <a href="tim_kiem.php?danh_muc=Khác">
                                 <h3>Xem tất cả</h3>
                             </a>
                         </div>
@@ -189,7 +240,13 @@
 
                     <?php } ?>
                 </div>
-
+            
+                <?php /* for($i=1; $i<=$so_trang ; $i++) { 
+  ?>
+  <a href="?trang=<?php echo $i ?>" style = "color: black; " >
+      <?php echo $i ?>
+  </a>
+<?php } */?>
 
             </div>
             <div class="vien_phai"></div>

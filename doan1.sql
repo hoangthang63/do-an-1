@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 23, 2022 at 04:48 AM
+-- Generation Time: Feb 21, 2022 at 08:42 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -24,18 +24,49 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `danh_muc`
+--
+
+CREATE TABLE `danh_muc` (
+  `ma` int(12) NOT NULL,
+  `ten` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `danh_muc`
+--
+
+INSERT INTO `danh_muc` (`ma`, `ten`) VALUES
+(2, 'Bút'),
+(3, 'Máy tính'),
+(4, 'Giấy'),
+(5, 'Mực '),
+(6, 'TIến gà');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hoa_don`
 --
 
 CREATE TABLE `hoa_don` (
   `ma` int(11) NOT NULL,
-  `ma_nhan_vien` int(11) NOT NULL,
   `ma_khach_hang` int(11) NOT NULL,
-  `ten_nguoi_dat` varchar(200) NOT NULL,
-  `thoi_gian_dat` date NOT NULL,
-  `sdt_nguoi_dat` varchar(20) NOT NULL,
-  `ghi_chu` varchar(200) NOT NULL
+  `ten_nguoi_nhan` varchar(50) NOT NULL,
+  `sdt_nguoi_nhan` char(20) NOT NULL,
+  `dia_chi_nhan_hang` text NOT NULL,
+  `tong_tien` double NOT NULL,
+  `ghi_chu` text NOT NULL,
+  `trang_thai` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hoa_don`
+--
+
+INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_nhan_hang`, `tong_tien`, `ghi_chu`, `trang_thai`) VALUES
+(8, 17, 'Van Thang', '911', 'ngõ 39 - tôn đức thắng', 5000, '', 0),
+(9, 17, 'Van Thang', '911', 'ngõ 39 - tôn đức thắng', 100000, '', 0);
 
 -- --------------------------------------------------------
 
@@ -49,6 +80,15 @@ CREATE TABLE `hoa_don_chi_tiet` (
   `so_luong` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `hoa_don_chi_tiet`
+--
+
+INSERT INTO `hoa_don_chi_tiet` (`ma_hoa_don`, `ma_san_pham`, `so_luong`) VALUES
+(8, 1, 1),
+(9, 7, 2),
+(9, 16, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -61,20 +101,18 @@ CREATE TABLE `khach_hang` (
   `gioi_tinh` varchar(20) NOT NULL DEFAULT 'nam',
   `email` varchar(200) NOT NULL,
   `mat_khau` varchar(200) NOT NULL,
-  `token` varchar(100) DEFAULT NULL
+  `token` varchar(100) DEFAULT NULL,
+  `sdt` char(20) NOT NULL,
+  `dia_chi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `khach_hang`
 --
 
-INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `email`, `mat_khau`, `token`) VALUES
-(1, 'Thang', 'nam', 'kiddy@gmail.com', '123', NULL),
-(2, 'kiddy1', 'nam', 'kd1@gmail.com', '123', NULL),
-(3, 'kiddy12', 'nam', 'kd12@gmail.com', '123', NULL),
-(4, 'kd', 'nam', 'kd@123', '123', NULL),
-(5, 'kd1', 'nam', 'kd@1234', '123', NULL),
-(6, 't1234ddd', 'nam', '123@3213ad', '123', NULL);
+INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `email`, `mat_khau`, `token`, `sdt`, `dia_chi`) VALUES
+(16, 'Hoang Thang', 'nam', 'asd@123', '12345678', NULL, '012345678', 'hn'),
+(17, 'Van Thang', 'nam', 'vt@123', '12345678', NULL, '911', 'ngõ 39 - tôn đức thắng');
 
 -- --------------------------------------------------------
 
@@ -167,9 +205,7 @@ INSERT INTO `san_pham` (`ma`, `ten`, `mo_ta`, `anh`, `gia`, `ma_nha_san_xuat`, `
 -- Indexes for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  ADD PRIMARY KEY (`ma`),
-  ADD KEY `ma_nhan_vien` (`ma_nhan_vien`),
-  ADD KEY `ma_khach_hang` (`ma_khach_hang`);
+  ADD PRIMARY KEY (`ma`);
 
 --
 -- Indexes for table `hoa_don_chi_tiet`
@@ -212,13 +248,13 @@ ALTER TABLE `san_pham`
 -- AUTO_INCREMENT for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`
@@ -235,13 +271,6 @@ ALTER TABLE `san_pham`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `hoa_don`
---
-ALTER TABLE `hoa_don`
-  ADD CONSTRAINT `hoa_don_ibfk_1` FOREIGN KEY (`ma_nhan_vien`) REFERENCES `nhan_vien` (`ma`),
-  ADD CONSTRAINT `hoa_don_ibfk_2` FOREIGN KEY (`ma_khach_hang`) REFERENCES `khach_hang` (`ma`);
 
 --
 -- Constraints for table `san_pham`

@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div id="tong" >
-		<?php include 'search_sign.php' ?>
+		<?php include '../search_sign.php' ?>
 
 		<?php 
 
@@ -49,7 +49,7 @@
 						<div class="submit">
 							<div class="add_gio_hang">
 								<br>
-								<a href="#">Thêm vào giỏ hàng</a>
+								<a href="../giohang/add_cart.php?id=<?php echo $ma ?>">Thêm vào giỏ hàng</a>
 							</div>
 							<div class="dat_hang">
 								<br>

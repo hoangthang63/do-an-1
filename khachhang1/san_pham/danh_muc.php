@@ -2,27 +2,27 @@
     <div class="le_trai"></div>
     <ul>
         <li>
-            <a href="#but">
+            <a href="tim_kiem.php?danh_muc=Bút">
                 <h3>Bút </h3>
             </a>
         </li>
         <li>
-            <a href="#vo">
+            <a href="tim_kiem.php?danh_muc=Vở">
                 <h3>Vở </h3>
             </a>
         </li>
         <li>
-            <a href="#may_tinh_bo_tui">
+            <a href="tim_kiem.php?danh_muc=Máy tính bỏ túi">
                 <h3>Máy tính bỏ túi</h3>
             </a>
         </li>
         <li>
-            <a href="#giay_in_an">
+            <a href="tim_kiem.php?danh_muc=Giấy in ấn">
                 <h3>Giấy in ấn</h3>
             </a>
         </li>
         <li>
-            <a href="#khac">
+            <a href="tim_kiem.php?danh_muc=Khác">
                 <h3>Khác</h3>
             </a>
         </li>

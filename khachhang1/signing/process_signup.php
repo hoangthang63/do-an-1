@@ -4,6 +4,8 @@ $ten = $_POST['name'];
 $email = $_POST['email'];
 $gioi_tinh = $_POST['gender'];
 $mat_khau = $_POST['password'];
+$sdt = $_POST['phone_number'];
+$dia_chi = $_POST['address'];
 
 require '../connect.php';
 $sql = "select count(*) from khach_hang where email = '$email'";
@@ -18,8 +20,8 @@ if($number_rows == 1){
     exit;
 }
 
-$sql = "insert into khach_hang(ten,gioi_tinh,email,mat_khau) 
-value('$ten','$gioi_tinh','$email','$mat_khau') ";
+$sql = "insert into khach_hang(ten,gioi_tinh,email,mat_khau,sdt,dia_chi) 
+value('$ten','$gioi_tinh','$email','$mat_khau','$sdt','$dia_chi') ";
 mysqli_query($ket_noi,$sql);
 
 $sql = "select ma from khach_hang 

@@ -16,9 +16,12 @@ if(empty($_SESSION['id'])){
 <?php 
     echo $_SESSION['name'];
 ?>
+<a href="../index.php">
+    Trang chủ
+</a>
 
 <a href="signout.php">
-    đăng xuất
+    Đăng xuất
 </a>
 </body>
 </html>
