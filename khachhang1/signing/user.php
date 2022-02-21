@@ -23,5 +23,9 @@ if(empty($_SESSION['id'])){
 <a href="signout.php">
     Đăng xuất
 </a>
+<br>
+<a href="../giohang/xem_don_da_dat.php">
+    Xem đơn hàng đã đặt
+</a>
 </body>
 </html>
