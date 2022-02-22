@@ -7,7 +7,7 @@ $dia_chi = $_POST['dia_chi'];
 $gioi_tinh = $_POST['gioi_tinh'];
 $ngay_sinh = $_POST['ngay_sinh'];
 $vi_tri = $_POST['vi_tri'];
-if($vi_tri = 'Nhân Viên'){
+if($vi_tri === 'Nhân Viên'){
     $vi_tri = 0;
 }else{
 $vi_tri = 1;

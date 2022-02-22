@@ -42,7 +42,10 @@
 							<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng nhập">
 
 						</a>
-					<?php }?>
+					<?php }else{ ?>
+			<br>
+			<a href="signing/user.php"> <?php echo "Xin chào, "; echo $_SESSION['name'];?> </a>
+		<?php } ?>
 				</div>
 				<div class="dang_ky">
 					<?php if(!isset($_SESSION['id'])){ ?>
@@ -86,7 +89,7 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 		if($i>$bo_qua && $i <= ($bo_qua + $so_san_pham_1)){?>	
 				<div class="mat_hang">	
 					<div class="anh">
-						<img src="../<?php echo $each['anh'] ?>">
+						<img src="<?php echo $each['anh'] ?>">
 					</div>
 					<div class="thong_tin">
 						<div class="name">
@@ -120,18 +123,25 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 <div class="dat_hang">
 <h3>Tổng tiền 	<?php echo $sum ?></h3>
 <?php if(isset($_SESSION['id'])){ ?>
+<?php
+$id = $_SESSION['id'];
+require_once '../connect.php';
+$sql = "select * from khach_hang where ma = '$id'";
+$ket_qua = mysqli_query($ket_noi,$sql);
+$each = mysqli_fetch_array($ket_qua);
+?>
 <form method="post" action="dathang.php">
 	Tên
 	<br>
-	<input class="input-box" type="text" name="ten">
+	<input class="input-box" type="text" name="ten" value="<?php echo $each['ten'] ?>">
 	<br>
 Địa chỉ 
 <br>
-<input class="input-box"  type="text" name="dia_chi">
+<input class="input-box"  type="text" name="dia_chi" value="<?php echo $each['dia_chi'] ?>">
 <br>
 Số điện thoại
 <br>
-<input class="input-box"  type="number" name="sdt">
+<input class="input-box"  type="number" name="sdt" value="<?php echo $each['sdt'] ?>">
 <br>
 Ghi chú
 <br>
@@ -147,7 +157,10 @@ Ghi chú
 <h1>	Vui lòng đăng nhập để đặt hàng</h1>
 <?php } ?>
 <?php } else{?>
-	<h1 style="text-align: center;">Giỏ hàng trống vui lòng quay trở lại trang chủ để mua hàng</h1>
+	<h3 style="text-align: center;">
+		<a style=" color: green;" href="xem_don_da_dat.php"> Xem đơn hàng đã đặt </a>
+	</h3>
+	<h1 style="text-align: center;">Giỏ hàng trống vui lòng quay trở lại trang chủ để mua hàng </h1>
 <?php } ?>
 </div>
 					</div>

@@ -12,9 +12,10 @@ include "leftside.php";
     $ket_qua = mysqli_query($ket_noi,$sql) ;
     $truy_van = mysqli_fetch_array($ket_qua);
     ?>
-    
+  
     <div class="admin-content-right">
         <div class="cartegory-add-content">
+              <?php if(isset($truy_van)){ ?>
             <h1>Sửa nhà xuất bản<span style="color: red;">*</span></h1><br>
             <form action="nhaxuatban_update_procces.php" method="post">
                 Mã nhà sản xuất
@@ -26,6 +27,9 @@ include "leftside.php";
                 <br> <br>
                 <button class="admin-btn" type="submit">Thêm</button>
             </form>
+        <?php } else{?>
+            <h1>Nhà xuất bản theo id này  không tồn tại</h1>
+        <?php } ?>
         </div>
     </div>
     </section><?php mysqli_close($ket_noi); ?>

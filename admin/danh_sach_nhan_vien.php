@@ -31,9 +31,11 @@ $ket_qua = mysqli_query($ket_noi, $sql);
                 <th>Chức vụ</th>
 
             </tr>
+            <?php if(isset($ket_qua)){ ?>
             <?php 
             $i = 0;
-            foreach ($ket_qua as $value ){$i++; 
+            foreach ($ket_qua as $value ){
+                $i++; 
                ?>
                 <tr>
                     <td><?php echo $i ?></td>
@@ -47,11 +49,11 @@ $ket_qua = mysqli_query($ket_noi, $sql);
                     <?php echo 'Quản lý' ?>
                 <?php } ?>
                 </tr>
-                <?php  } ?>          
-<?php          $loi = mysqli_error($ket_noi); // in ra lỗi 
-echo $loi;
- ?>
-            </table>
+                <?php  } ?> 
+                <?php }else{ ?>
+                    <h1>Không tồn tại nhân viên</h1>
+                <?php } ?>         
+        </table>
                    <?php  for($i=1; $i<=$so_trang ; $i++) { 
           ?>
           <a href="?trang=<?php echo $i ?>" style = "color: black; " >

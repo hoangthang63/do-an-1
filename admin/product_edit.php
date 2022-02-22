@@ -17,6 +17,7 @@ $ket_quaNSX = mysqli_query($ket_noi,$sql_NSX);
 $truy_van = mysqli_fetch_array($ket_qua); ?>
 <div class="admin-content-right">
       <div class="product-add-content">
+        <?php if(isset($truy_van)){ ?>
         <h2>Sửa Sản phẩm <span style="color: red;">*</span></h2><br>
         <form action="product_edit_procesc.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="ma" value="<?php echo $ma ?>">
@@ -53,6 +54,9 @@ $truy_van = mysqli_fetch_array($ket_qua); ?>
             <span style="color: red;"></span>
             <button class="admin-btn" name="submit" type="submit">Sửa</button>
         </form>
+    <?php }else{
+        echo "Sản phẩm này không tồn tại"
+    } ?>
     </div>
 </div>
 <?php mysqli_close($ket_noi); ?>
