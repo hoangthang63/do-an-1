@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 14, 2022 at 08:41 PM
+-- Generation Time: Feb 25, 2022 at 09:40 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -38,10 +38,11 @@ CREATE TABLE `danh_muc` (
 
 INSERT INTO `danh_muc` (`ma`, `ten`) VALUES
 (2, 'Bút'),
-(3, 'Máy tính'),
 (4, 'Giấy'),
 (5, 'Mực '),
-(6, 'TIến gà');
+(6, 'TIến gà'),
+(7, '13'),
+(8, 'ANh tình');
 
 -- --------------------------------------------------------
 
@@ -57,18 +58,19 @@ CREATE TABLE `hoa_don` (
   `dia_chi_nhan_hang` varchar(50) NOT NULL,
   `tong_tien` double NOT NULL,
   `ghi_chu` text NOT NULL,
-  `trang_thai` int(10) NOT NULL
+  `trang_thai` int(10) NOT NULL,
+  `thoi_gian_dat` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `hoa_don`
 --
 
-INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_nhan_hang`, `tong_tien`, `ghi_chu`, `trang_thai`) VALUES
-(8, 6, 'h', 23, 'g', 128, 'df', 2),
-(9, 6, 'h', 23, 'g', 128, 'df', 0),
-(10, 6, 'h', 23, 'g', 128, 'df', 0),
-(11, 6, 'h', 23, 'g', 128, 'df', 0);
+INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_nhan_hang`, `tong_tien`, `ghi_chu`, `trang_thai`, `thoi_gian_dat`) VALUES
+(8, 6, 'h', 23, 'g', 128, 'df', 2, '0000-00-00 00:00:00'),
+(9, 6, 'h', 23, 'g', 128, 'df', 0, '0000-00-00 00:00:00'),
+(10, 6, 'h', 23, 'g', 128, 'df', 2, '0000-00-00 00:00:00'),
+(11, 6, 'h', 23, 'g', 128, 'df', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -102,16 +104,18 @@ CREATE TABLE `khach_hang` (
   `email` varchar(200) NOT NULL,
   `mat_khau` varchar(50) NOT NULL,
   `dia_chi` varchar(100) NOT NULL,
-  `sdt` int(20) NOT NULL
+  `sdt` int(20) NOT NULL,
+  `token` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `khach_hang`
 --
 
-INSERT INTO `khach_hang` (`ma`, `ten`, `email`, `mat_khau`, `dia_chi`, `sdt`) VALUES
-(6, 'Huỳnh Nhật Linh', '52100815@student.tdtu.edu.vn', '12345', '', 0),
-(7, 'Linh', 'qfd@gmail.com', '1234', 'uuu', 123213213);
+INSERT INTO `khach_hang` (`ma`, `ten`, `email`, `mat_khau`, `dia_chi`, `sdt`, `token`) VALUES
+(6, 'Huỳnh Nhật Linh', '52100815@student.tdtu.edu.vn', '12345', '', 0, NULL),
+(7, 'Linh', 'qfd@gmail.com', '12345', 'uuu', 123213213, NULL),
+(8, '3', '333e33@gmail.com', '12345', '3', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -128,15 +132,18 @@ CREATE TABLE `nhan_vien` (
   `ngay_sinh` text NOT NULL,
   `email` varchar(200) NOT NULL,
   `mat_khau` varchar(200) NOT NULL,
-  `cap_do` int(1) NOT NULL
+  `cap_do` int(1) NOT NULL,
+  `token` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `nhan_vien`
 --
 
-INSERT INTO `nhan_vien` (`ma`, `ten`, `sdt`, `dia_chi`, `gioi_tinh`, `ngay_sinh`, `email`, `mat_khau`, `cap_do`) VALUES
-(1, '13', '13', 132, 'Nam', '123', '123@fa', '132', 0);
+INSERT INTO `nhan_vien` (`ma`, `ten`, `sdt`, `dia_chi`, `gioi_tinh`, `ngay_sinh`, `email`, `mat_khau`, `cap_do`, `token`) VALUES
+(1, '13', '13', 132, 'Nam', '123', '123@fa', '132', 1, NULL),
+(2, '14', '42', 432, 'Nam', '42', '42@234', '24', 0, NULL),
+(3, '14', '42', 432, 'Nam', '42', '421@234', '12', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -156,7 +163,8 @@ CREATE TABLE `nha_san_xuat` (
 INSERT INTO `nha_san_xuat` (`ma`, `ten`) VALUES
 ('24', '234'),
 ('2432', '432432'),
-('24342', '24243');
+('24342', '24243'),
+('fd', 'df');
 
 -- --------------------------------------------------------
 
@@ -179,10 +187,6 @@ CREATE TABLE `san_pham` (
 --
 
 INSERT INTO `san_pham` (`ma`, `ten`, `mo_ta`, `anh`, `gia`, `nha_san_xuat`, `danh_muc`) VALUES
-(1, 'Bút TL00', '- Bút có thiết kế đơn giản, toàn bộ thân bút làm từ nhựa trong, nút bấm bằng nhựa màu cùng màu với ruột bút.\r\n\r\n- Viết trơn, êm, mực ra đều, liên tục.\r\n\r\n- Sử dụng cơ chế bấm đóng mở.', 'https://th.bing.com/th/id/R.71a38dbe79c164b0897ab30f57a7391b?rik=rcww4B2B7NYzmw&pid=ImgRaw&r=0', 5000, 'TL', 'Bút'),
-(2, 'Bút TL01', '- Bút có thiết kế đơn giản, toàn bộ thân bút làm từ nhựa trong, nút bấm bằng nhựa màu cùng màu với ruột bút.\r\n\r\n- Viết trơn, êm, mực ra đều, liên tục.\r\n\r\n- Sử dụng cơ chế bấm đóng mở.', 'https://namcuongthinh.com/wp-content/uploads/2020/03/untitled-1-33a59802-fbe4-476a-8197-9da9a238b387-768x768.png', 6000, 'TL', 'Bút'),
-(3, 'Bút TL02', '- Bút có thiết kế đơn giản, toàn bộ thân bút làm từ nhựa trong, nút bấm bằng nhựa màu cùng màu với ruột bút.\r\n\r\n- Viết trơn, êm, mực ra đều, liên tục.\r\n\r\n- Sử dụng cơ chế bấm đóng mở.', 'https://www.thienlong.com.vn/vnt_upload/product/TL_097/thumbs/870_TL_097_01.jpg', 7000, 'TL', 'Bút'),
-(4, 'Bút Deli', '- Bút có thiết kế đơn giản, toàn bộ thân bút làm từ nhựa trong, nút bấm bằng nhựa màu cùng màu với ruột bút.\r\n\r\n- Viết trơn, êm, mực ra đều, liên tục.\r\n\r\n- Sử dụng cơ chế bấm đóng mở.', 'https://cf.shopee.vn/file/7d51a801b69325ff1048640a46d3a6dd', 8000, 'DL', 'Bút'),
 (5, '12', '32', '../photo/1643529267.jpg', 32, '432432', 'ffafd');
 
 --
@@ -242,7 +246,7 @@ ALTER TABLE `san_pham`
 -- AUTO_INCREMENT for table `danh_muc`
 --
 ALTER TABLE `danh_muc`
-  MODIFY `ma` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ma` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `hoa_don`
@@ -254,13 +258,13 @@ ALTER TABLE `hoa_don`
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`
 --
 ALTER TABLE `nhan_vien`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `san_pham`
