@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <section class="admin-content row space-between">
     <div class="admin-content-left">
         <div class="header-top-left">
@@ -59,7 +59,7 @@
                 </ul>
             </li>
              <?php } ?> 
-            <li><a href="../khachhang1/signing/signout.php"> <img style=" width:30px" src="icon/logout.png" alt="">Đăng Xuất</a>
+            <li><a href="signing/signout.php"> <img style=" width:30px" src="icon/logout.png" alt="">Đăng Xuất</a>
 
             </li>
         </ul>

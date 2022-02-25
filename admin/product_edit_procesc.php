@@ -17,7 +17,7 @@ $path_file = $folder.time().'.'.$file_exention;
 
 move_uploaded_file($anh['tmp_name'],$path_file);
 
-mysqli_query($ket_noi,$truyvan);
+
 
 $truyvan = "update san_pham
 set 
@@ -30,7 +30,7 @@ nha_san_xuat = '$nha_san_xuat'
 where
 ma = '$ma' 
 ";
-
+mysqli_query($ket_noi,$truyvan);
 $loi = mysqli_error($ket_noi); // in ra lỗi 
 echo $loi;
 mysqli_close($ket_noi);

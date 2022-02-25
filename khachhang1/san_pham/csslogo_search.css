@@ -59,3 +59,14 @@ a > img{
 	margin-right: 10px;
 	
 }
+#tren >.dang_nhap >.dangnhap h3:hover ul{
+	display: block;
+	position: absolute;
+}
+#tren >.dang_nhap >.dangnhap h3{
+	display: block;
+	position: relative;
+}
+#tren >.dang_nhap >.dangnhap h3> ul> li{
+	color: black;
+}

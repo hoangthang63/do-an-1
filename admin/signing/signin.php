@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K.mart</title>    <link rel="stylesheet" type="text/css" href="giua.css">
+    <title>K.mart</title>
+    <link rel="stylesheet" type="text/css" href="giua.css">
     <link rel="stylesheet" type="text/css" href="phantren.css">
    
 
 
 </head>
  
-<body>
-
-          
+<body>    
             <?php require 'phantren.php' ?>
 <?php
     session_start();
     if(isset($_COOKIE['remember'])){
         require '../connect.php';
         $token = $_COOKIE['remember'];
-        $sql = "select * from khach_hang 
+        $sql = "select * from nhan_vien 
         where token = '$token'
         limit 1";
         $result = mysqli_query($ket_noi,$sql);  
@@ -32,11 +31,7 @@
         }
 
     }
-    if(isset($_SESSION['id']))
-    {
-        header('location:index.php');
-    }
-
+    
 ?>
 
         <main>
@@ -66,11 +61,7 @@
                         </button>
                     </div>
                     <br>
-                    <div class="btn-box" >
-                        <a href="signup.php" style="color: black;"> 
-                        Bạn chưa có tài khoản? Đăng ký.
-                    </a>
-                    </div>
+                   
                 </form>
             </div>
             </div>

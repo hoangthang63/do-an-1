@@ -122,7 +122,9 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 <?php } ?>
 <div class="dat_hang">
 <h3>Tổng tiền 	<?php echo $sum ?></h3>
-<?php if(isset($_SESSION['id'])){ ?>
+<?php if(isset($_SESSION['id'])){ 
+ ?>
+ <a style=" color: green;" href="xem_don_da_dat.php"> Xem đơn hàng đã đặt </a>
 <?php
 $id = $_SESSION['id'];
 require_once '../connect.php';
@@ -158,7 +160,7 @@ Ghi chú
 <?php } ?>
 <?php } else{?>
 	<h3 style="text-align: center;">
-		<a style=" color: green;" href="xem_don_da_dat.php"> Xem đơn hàng đã đặt </a>
+		
 	</h3>
 	<h1 style="text-align: center;">Giỏ hàng trống vui lòng quay trở lại trang chủ để mua hàng </h1>
 <?php } ?>

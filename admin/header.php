@@ -1,4 +1,8 @@
-
+<?php session_start(); 
+if (empty($_SESSION['vi_tri'])) {
+    
+    header('location:signing/signin.php');
+}?>
 <!DOCTYPE html>
 <html lang="en">
 

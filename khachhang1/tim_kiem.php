@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+<title>K.mart</title>
 	<link rel="stylesheet" href="san_pham/csslogo_search.css">
 	<link rel="stylesheet" href="san_pham/danh_muc_sanpham.css">
 	<link rel="stylesheet" href="san_pham/css_phanchinh.css">
