@@ -31,7 +31,7 @@
             margin-right: auto;
 
         }
-        ul >li > ul >li{
+      #danh_muc>  ul >li > ul >li{
     width: 100%;
     background: white;
     height: 200px;

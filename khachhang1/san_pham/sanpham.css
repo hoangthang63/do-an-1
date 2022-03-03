@@ -1,6 +1,6 @@
 #giua{
 	width: 100%;
-	height: 1000px;
+	height: 1200px;
 }
 #giua >.vien_trai{
 	width:  15%;
@@ -12,7 +12,7 @@
 #giua >.san_pham{
 	background: white;
 	width:  70%;
-	height: 100%;
+	height: 98%;
 	float: left;
 	margin-top:20px ;
 
@@ -37,12 +37,12 @@
 	background: violet;
 }
 #giua >.san_pham >.thong_tin >.thong_tin_chi_tiet{
-	width: 50%;
+	width: 49%;
 	height: 100%;
 	float: left;
 	background: white;
 
-	border: solid black;
+	/*border: solid black;*/
 }
 #giua >.san_pham >.thong_tin >.thong_tin_chi_tiet>.name{
 	height: 10%;
@@ -106,7 +106,7 @@
 
 }
 .san_pham >.mo_ta_chi_tiet{
-	width: 90%;
+	width: 100%;
 	height: 300px;
 	
 	margin-top: 30px;

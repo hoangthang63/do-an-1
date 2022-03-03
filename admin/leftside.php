@@ -59,6 +59,9 @@
                 </ul>
             </li>
              <?php } ?> 
+            <li><a href="signing/edit_password.php"> <img style=" width:30px" src="icon/logout.png" alt="">Đổi mật khẩu</a>
+
+            </li> 
             <li><a href="signing/signout.php"> <img style=" width:30px" src="icon/logout.png" alt="">Đăng Xuất</a>
 
             </li>

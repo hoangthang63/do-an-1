@@ -14,7 +14,7 @@
     #tong {
         background: #AAAAAA;
         width: 100%;
-        height: 1300px;
+        height: 1500px;
     }
 
     .timkiem input[class="tim_kiem"] {
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-
+<div id="tong">
     <?php
 	require 'search_sign.php';
 	include	'san_pham/danh_muc.php';

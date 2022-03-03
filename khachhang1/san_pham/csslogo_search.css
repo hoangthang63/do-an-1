@@ -57,16 +57,34 @@ a > img{
 	margin-top: 15px;
 	margin-left: auto;
 	margin-right: 10px;
-	
 }
-#tren >.dang_nhap >.dangnhap h3:hover ul{
-	display: block;
+#tren >.dang_nhap >.dangnhap > ul >li{
+	position: relative;
+	display: block ;
+	height: 100px;
+	width: 100px;
+}#tren >.dang_nhap >.dangnhap > ul{
+	position: relative;
+	display: block ;
+	height: 100%;
+	width: 50%;
+}
+#tren >.dang_nhap >.dangnhap ul >li:hover ul{
+	display: block ;
 	position: absolute;
 }
-#tren >.dang_nhap >.dangnhap h3{
-	display: block;
-	position: relative;
-}
-#tren >.dang_nhap >.dangnhap h3> ul> li{
+/*#tren >.dang_nhap >.dangnhap ul > li:hover{
+	background: white;
+}*/
+#tren >.dang_nhap >.dangnhap ul >li >a{
+	text-align: center;
 	color: black;
+	display: block;
+}
+
+#tren >.dang_nhap >.dangnhap ul >li >ul{
+	display:none;
+	background:white;
+	margin-top: -10px;
+	width: 150px;
 }

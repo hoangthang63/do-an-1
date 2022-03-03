@@ -4,9 +4,6 @@
 	background-color: yellowgreen;
 	color: black;
 }
-
-
-
 #danh_muc >.le_trai{
 	height: 100%;
 	width: 3%;
@@ -51,25 +48,20 @@
 	color: black;
 	text-align: center;
 }
-
-#danh_muc ul >li:hover ul {
+#danh_muc ul >li:hover ul{
 	display: block ;
 	position: absolute;
 }
-
 #danh_muc >ul > li:hover{
 	background: white;
-
 }
 #danh_muc> ul >li > a{
 	text-align: center;
 	color: black;
 	display: block;
-
 }
 #danh_muc > ul >li > ul >li:hover{
-	background:black;
-	
+	background:black;	
 }
 #danh_muc > ul >li > ul >li:hover >a{
 	color: white;

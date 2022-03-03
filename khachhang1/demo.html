@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>K.mart</title>
+    <link rel="stylesheet" href="san_pham/csslogo_search.css">
+    <link rel="stylesheet" href="san_pham/danh_muc_sanpham.css">
+    <link rel="stylesheet" href="san_pham/css_phanchinh.css">
+    <link rel="stylesheet" href="san_pham/css_thong_tin_duoi.css">
+    <style type="text/css">
+        #tong {
+
+            width: 100%;
+            height: 2510px
+            background: black;
+        }
+
+        .timkiem input[class="tim_kiem"] {
+            width: 70%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            padding: 12px 20px 12px 40px;
+            display: block;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        #danh_muc>ul >li > ul >li{
+            width: 100%;
+            background: white;
+            height: 200px;
+            width: 150px;
+            text-align: center;
+
+        } 
+
+    </style>
+</head>
+
+<body>
+    <div id="tong">
+
+        <div id="tren">
+            <div class="logo">
+                <a href="index.php">
+                    <h1 text-align="center" style="margin-left: 50px ;margin-top: 10px; color: red;">K1.Mark </h1>
+                </a>
+            </div>
+            <div class="timkiem">
+                <form action="tim_kiem.php" method="gets">
+                    <input class="tim_kiem" type="search" name="tim_kiem"  >
+                </form>
+            </div>
+
+            <div class="dang_nhap">
+                <div class="dangnhap">
+               <!-- 
+                <a href="signing/signin.php">
+                    <img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng nhập">
+
+                </a> -->
+                <ul>    
+                    <li>    
+                    <a href="#" style="color: black;">
+                        <h3>dffsdf </h3>   
+                    </a>
+                        <ul>
+                            <li  style="padding: 10px;"><a href="giohang/xem_don_da_dat.php">Xem đơn đã đặt</a></li>
+                            <li style="padding: 10px;"><a href="signing/edit.php">Thay đổi thông tin </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+
+            </div>
+            <div class="dang_ky">
+
+            </div>
+            <div class="Gio_hang">
+                <a href="giohang/xem.php">
+                    <img src="https://img.icons8.com/ios-filled/452/shopping-cart.png" height="35" title="Giỏ hàng">
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

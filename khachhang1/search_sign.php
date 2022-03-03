@@ -24,15 +24,19 @@
 					<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng nhập">
 
 				</a>
-			<?php }else{
-
-			?> 
-			<h3><a href="#">Chào bạn <?php echo $_SESSION['name'] ?></a>
-				<ul>
-					<li ><a href="">Xem đơn đã đặt</a></li>
-					<li><a href="signing/edit.php">Thay đổi thông tin<</a></li>
-				</ul>
-			</h3>
+			<?php }else{ ?> 
+			 <ul style="align:left">    
+                    <li>    
+                    <a href="#" style="color: black;">
+                        <h3>dffsdf </h3>   
+                    </a>
+                        <ul>
+                            <li  style="padding: 10px;"><a href="giohang/xem_don_da_dat.php">Xem đơn đã đặt</a></li>
+                            <li style="padding: 10px;"><a href="signing/edit.php">Thay đổi thông tin </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
 		<?php } ?>
 			</div>
 			<div class="dang_ky">
@@ -40,6 +44,7 @@
 				<a href="signing/signup.php">
 					<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-128.png" height="35" title="Đăng ký">
 				</a>
+				
 				<?php }else{ ?>
 				<a href="signing/signout.php">
 					<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng xuất">

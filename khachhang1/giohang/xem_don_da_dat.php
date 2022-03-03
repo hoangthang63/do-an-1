@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if(empty($_SESSION['ma'])){
+if(empty($_SESSION['id'])){
     header('location:../index.php');
 } ?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ height: 1000px;
     <div id="tong">
         <div id="tren">
         <div class="logo">
-            <a href="index.php">
+            <a href="../index.php">
                 <h1 text-align="center" style="margin-left: 50px ;margin-top: 10px; color: red;">K1.Mark </h1>
             </a>
         </div>
@@ -84,7 +84,9 @@ $sql = "select * from hoa_don where ma_khach_hang = '$ma'" ;
 $ket_qua = mysqli_query($ket_noi,$sql);
 $bai_san_pham = mysqli_fetch_array($ket_qua);
 ?>
-
+<?php if (isset($bai_san_pham)) {
+    
+    ?>
 <table align="center" style="width: 70%;">
             <tr>
                 <th>Mã đơn</th>
@@ -120,7 +122,11 @@ $bai_san_pham = mysqli_fetch_array($ket_qua);
              </tr>
             <?php } ?>
             </table>
-            
+            <?php }else{ ?>
+<h3>Bạn chưa có đơn hàng nào vui lòng trở lại trang chủ để mua hàng 
+<br>
+<a href="../index.php" style="color:black;">Trở lại</a></h3>
+<?php } ?>
             <?php mysqli_close($ket_noi); ?>
 </div>
 <?php require '../footer.php' ?>
