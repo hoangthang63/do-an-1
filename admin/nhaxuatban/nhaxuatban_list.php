@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 ?>
@@ -63,7 +63,7 @@ $ket_qua = mysqli_query($ket_noi, $sql);
     </div><?php mysqli_close($ket_noi); ?>
 </div>
 </section>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 
 </html>

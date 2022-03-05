@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";?>
 <?php require 'connect.php';
 $ma = $_GET['ma']; 
@@ -38,7 +38,7 @@ $ket_qua = mysqli_query($ket_noi,$sql);
      <?php mysqli_close($ket_noi); ?>
 </div>
 </section>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,12 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 ?>
 
 <body>
     <?php 
-    require 'connect.php';
+    require '../connect.php';
     $ma = $_GET['ma'];
     $sql = "select * from nha_san_xuat where ma = '$ma'";
     $ket_qua = mysqli_query($ket_noi,$sql) ;
@@ -33,7 +33,7 @@ include "leftside.php";
         </div>
     </div>
     </section><?php mysqli_close($ket_noi); ?>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
     
 </html>

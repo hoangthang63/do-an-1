@@ -1,7 +1,7 @@
 <?php 
 $ma = $_POST['ma'];
 $ten = $_POST['ten'];
-include 'connect.php';
+include '../connect.php';
 $truyvan = "update nha_san_xuat
 set 
 ma = '$ma',

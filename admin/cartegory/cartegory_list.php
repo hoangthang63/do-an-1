@@ -1,13 +1,9 @@
 <?php
-require_once "header.php";
+require_once "../header.php";
 require_once "leftside.php";
 
-
 $ket_noi = mysqli_connect('localhost','root','','doan1');
-
 mysqli_set_charset($ket_noi,'utf8');
-
-
 $trang = 1;
 if(isset($_GET['trang'])){
     $trang = $_GET['trang'];
@@ -64,7 +60,7 @@ $ket_qua = mysqli_query($ket_noi, $sql);
 </div>
 </div>
 </section>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 
 </html>

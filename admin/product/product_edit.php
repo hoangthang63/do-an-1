@@ -1,11 +1,11 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 
 ?>
 <?php 
-require 'connect.php' ;
+require '../connect.php' ;
 $ma = $_GET['ma'];
 $sql = "select * from san_pham where ma = '$ma'";
 $ket_qua = mysqli_query($ket_noi,$sql) ;
@@ -60,7 +60,7 @@ $truy_van = mysqli_fetch_array($ket_qua); ?>
     </div>
 </div>
 <?php mysqli_close($ket_noi); ?>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 

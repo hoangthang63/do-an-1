@@ -14,13 +14,14 @@
           
             <?php require 'phantren.php' ?>
           
-        <?php
+      <main>
+              <?php
     if(isset($_GET['error']))
     {
         echo $_GET['error'];
     }
 ?>
-        <main>
+    
             <div class="container">
             <div class="login-form">
                 <form action="process_signup.php" method="post">

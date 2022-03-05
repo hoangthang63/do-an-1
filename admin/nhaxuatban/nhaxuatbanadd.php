@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 ?>
@@ -22,7 +22,7 @@ include "leftside.php";
         </div>
     </div>
     </section>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
     
 </html>

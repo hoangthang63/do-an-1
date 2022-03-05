@@ -7,9 +7,9 @@ $gia = $_POST['gia'];
 $anh = $_FILES['anh'];
 $danh_muc = $_POST['danh_muc'];	
 
-include 'connect.php';
+include '../connect.php';
 
-$folder = '../photo/';
+$folder = '../../photo/';
 
 $file_exention = explode('.', $anh['name'])[1];
 

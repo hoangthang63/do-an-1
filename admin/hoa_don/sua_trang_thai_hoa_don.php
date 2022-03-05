@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 $ket_noi = mysqli_connect('localhost','root','','doan1');
@@ -60,7 +60,7 @@ $ma = $_GET['ma'];
   <?php mysqli_close($ket_noi); ?>
 </div>
 </section>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 
 </html>

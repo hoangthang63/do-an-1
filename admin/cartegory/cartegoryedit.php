@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 ?>
@@ -8,7 +8,7 @@ include "leftside.php";
 
 <body>
 <?php 
-require 'connect.php';
+require '../connect.php';
 $ma = $_GET['ma'];
 $sql = "select * from danh_muc where ma = '$ma'";
 $ket_qua = mysqli_query($ket_noi,$sql) ;
@@ -40,7 +40,7 @@ $truy_van = mysqli_fetch_array($ket_qua);
 $loi = mysqli_error($ket_noi); // in ra lỗi 
 echo $loi;
  mysqli_close($ket_noi); ?>
-	<script src="script.js"></script>
+	<script src="../script.js"></script>
 </body>
 
 </html>

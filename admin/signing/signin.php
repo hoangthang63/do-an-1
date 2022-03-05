@@ -15,6 +15,7 @@
 <body>    
             <?php require 'phantren.php' ?>
 <?php
+
     session_start();
     if(isset($_COOKIE['remember'])){
         require '../connect.php';
@@ -35,6 +36,11 @@
 ?>
 
         <main>
+            <?php if(isset($_GET['error'])){
+
+             ?>
+              <h2 style="color:red"><?php echo $_GET['error'] ?></h2>
+         <?php } ?>
             <div class="container">
               <div class="login-form">
                 <form action="process_signin.php" method="post">
@@ -50,11 +56,6 @@
                     <div>
                         Ghi nhớ đăng nhập<input type="checkbox" name="remember">
                     </div>
-                  
-                  
-                    
-                      
-                   
                     <div class="btn-box">
                         <button type="submit">
                             Đăng nhập
@@ -66,9 +67,11 @@
             </div>
             </div>
         </main>
-        
-           
+         <button ></button>
            <?php require '../footer.php' ?>
-       
+
     </body>
+<script type="text/javascript">
+    
+</script>
 </html>

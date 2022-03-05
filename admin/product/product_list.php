@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../header.php";
 include "leftside.php";
 
 ?>
@@ -9,7 +9,7 @@ include "leftside.php";
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <title></title>
 </head>
 
@@ -70,7 +70,7 @@ include "leftside.php";
         </div>
     </div>
 </section>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 <?php 
 
 mysqli_close($ket_noi); ?>

@@ -7,7 +7,7 @@ $mo_ta = $_POST['mo_ta'];
 $anh = $_FILES['anh'];
 $ket_noi = mysqli_connect('localhost','root','','doan1');
 mysqli_set_charset($ket_noi,'utf8');
-$folder = '../photo/';
+$folder = '../../photo/';
 
 $file_exention = explode('.', $anh['name'])[1];
 

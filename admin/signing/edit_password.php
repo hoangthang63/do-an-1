@@ -72,7 +72,7 @@
         <div class="vien_phai"></div>
 
     </div>
-    <?php include '../footer.php' ?>
+    <?php include '../../khachhang1/footer.php' ?>
 </div>
 
 

@@ -14,7 +14,7 @@
         #tong {
 
             width: 100%;
-            height: 2510px
+            height: 2310px
         }
 
         .timkiem input[class="tim_kiem"] {
@@ -31,14 +31,7 @@
             margin-right: auto;
 
         }
-      #danh_muc>  ul >li > ul >li{
-    width: 100%;
-    background: white;
-    height: 200px;
-    width: 150px;
-    text-align: center;
-
-} 
+    
     </style>
 </head>
 

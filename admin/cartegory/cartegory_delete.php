@@ -1,12 +1,9 @@
 <?php 
-$ma = $_POST['ma'];
-$ten = $_POST['ten'];
-require 'connect.php';
-$truy_van = "update danh_muc
-set 
-ten = '$ten'
-where
-ma = '$ma'";
+$ma = $_GET['ma'];
+
+require '../connect.php';
+$truy_van = "delete from danh_muc
+where ma = '$ma'";
 mysqli_query($ket_noi,$truy_van);
 $loi = mysqli_error($ket_noi); // in ra lỗi 
 echo $loi;

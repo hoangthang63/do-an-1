@@ -1,7 +1,7 @@
 <?php  
 $ma = $_POST['ma'];
 $trang_thai = $_POST['trang_thai'];
-include 'connect.php';
+include '../connect.php';
 if($trang_thai==='Đang giao'){ 
 	$trang_thai = 0;
 	 }elseif ($trang_thai==='Đã giao') {
