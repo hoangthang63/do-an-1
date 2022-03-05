@@ -17,28 +17,32 @@
             </div>
             <div class="Doi_tac">
 
-                <ul>
-                    <li>
+
                         <h4>Follow Page tại:</h4>
-                    </li>
 
-                </ul>
-
-                <a href="#">
-                    <img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" height="40"text-text-align="left">
-                </a>    
-
-
-                <a href="#">
-                    <img src="https://img.icons8.com/doodle/48/000000/whatsapp.png"height="40"text-align="left">
-                </a>
-
-
-                <a href="#">
-                    <img src="https://img.icons8.com/bubbles/50/000000/instagram-new--v1.png"height="40"text-align="left">
-                </a>    
-                <a href="#">
-                    <img src="https://img.icons8.com/color/48/000000/twitter--v2.png"height="35"text-align="left">
-                </a>
+            <table>
+                <tr>
+                    <td>
+                        <a href="#">
+                            <img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" height="40">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <img src="https://img.icons8.com/doodle/48/000000/whatsapp.png"height="40">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <img src="https://img.icons8.com/bubbles/50/000000/instagram-new--v1.png"height="40">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <img src="https://img.icons8.com/color/48/000000/twitter--v2.png"height="35">
+                        </a>
+                    </td>
+                </tr>
+            </table>
             </div>
         </div>

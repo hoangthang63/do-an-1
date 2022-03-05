@@ -28,7 +28,7 @@ if($number_rows == 1 ){
         where ma = '$id' ";
         setcookie('remember', $token, time() + 60*60*24*30);
     }
-    header('location:user.php');
+    header('location:../user/user_body_profile.php');
     exit;
 }
 

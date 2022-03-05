@@ -68,6 +68,7 @@
             <div class="vien_trai"></div>
 
             <div class="giua">
+                <a href="#" style="position: fixed; bottom: 100px; right:0;"><img src="https://img.icons8.com/stickers/100/000000/chevron-up.png"/></a>
                 <?php
                 /*
             <?php foreach ($ket_qua as $tung_danh_muc) { ?>

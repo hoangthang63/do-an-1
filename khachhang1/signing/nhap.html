@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<style>
+    body{
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to right, #003e6e 0%, #056cc6 100%);
+}
+.profile-container{
+  width: 485px;
+  height: 485px;
+  margin: 0 auto;
+  margin-top: 200px;}
+  .profile-menu{
+    float: left;
+    width: 37%;
+    height: 482px;
+    background: #ffffff;
+    box-shadow: 0 0 25px rgba(#000000, 0.2);}
+    .image-container{
+      width: 70px;
+      height: 70px;
+      margin: 60px 0 40px 20px;}
+      img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;}
+        :hover{
+          opacity: 0.8;
+        }
+      
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;}
+      li{
+        padding: 10px 20px;
+        font-size: 13px;}
+        :hover, .active{
+          background: #f7f7f7;
+          border-left: solid 5px #e48418;
+        }
+        :last-child{
+          margin-top: 50px;
+        }
+      
+    
+  
+  .profile-content{
+    width:63%;
+    float:right;
+    background: #ffffff;
+    box-shadow: 0 0px 25px rgba(#000000, 0.2);}
+    .actions{
+      width: 100%;
+      background: linear-gradient(to right, #e48418 0%, #ffd900 100%);
+      height: 40px;
+      line-height: 40px;
+      color: #ffffff;
+      padding: 20px 0 0px 0;}
+      i{
+        padding-left: 20px;
+        float: left;
+        font-size: 20px;}
+        :hover{
+          opacity: 0.8;
+        }
+      
+      i+i{
+        padding-right: 20px;
+        float: right;
+      }
+    
+    .pic{
+      background: linear-gradient(to right, #e48418 0%, #ffd900 100%);
+      text-align:center;
+      color: #ffffff;
+      padding: 0px 0px 20px 0px;}
+      img{
+        width:90px;
+        border-radius: 50%;}
+        :hover{
+          opacity: 0.8;
+        }
+      
+      h2{
+        font-size: 17px;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+      }
+      span{
+        font-size: 15px;
+        font-weight: 300;
+      }
+    
+    .summary{
+      color: #ffffff;}
+      .content{
+        width:50%;
+        float: left;
+        text-align: center;
+        display: block;
+        background: linear-gradient(to right, #e48418 0%, #ffd900 100%);
+        padding: 10px 0;}
+        span{
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      
+    
+    .profile-details ul{
+      
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #929292;}
+        .profile-details ul   li{
+          line-height: 50px;
+          border-bottom: 1px solid #f2f2f2;
+          font-weight: 400;
+          padding-left: 30px;
+          font-size: 14px;}
+ 
+          i{
+            margin-right: 10px;
+          }
+          .profile-details ul span{
+            float: right;
+            font-weight: 500;}
+            .profile-details ul :after{
+              content:'\f054';
+              font-family: 'FontAwesome';
+              font-size: 12px;
+              float: right;
+              margin-right: 20px;
+              margin-left: 20px;
+            }
+
+</style>
+<body>
+    
+<div class="profile-container">
+  <div class="profile-menu">
+    <div class="image-container">
+      <img src="http://pixeltime.ro/profile.jpg" alt="">
+    </div>
+    <ul>
+      <li class="active">Projects</li>
+      <li>Developers</li>
+      <li>Teams</li>
+      <li>Jobs</li>
+      <li>Log out</li>
+    </ul>
+  </div>
+  <div class="profile-content">
+    <div class="actions">
+      <i class="fa fa-cog"></i>
+      <i class="fa fa-bell"></i>
+    </div>
+    <div class="pic">
+      <img src="http://pixeltime.ro/profile.jpg" alt="">
+      <h2>Florin Matei</h2>
+      <span>UI Developer</span>
+    </div>
+    <div class="summary">
+      <div class="content">
+        <span>233</span>
+        <span>Follows</span>
+      </div>
+      <div class="content">
+        <span>349</span>
+        <span>Following</span>
+      </div>
+    </div>
+    <div class="profile-details">
+      <ul>
+        <li><i class="fa fa-images"></i>Shots<span>35</span></li>
+        <li><i class="fa fa-heart"></i>Likes<span>236</span></li>
+        <li><i class="fa fa-video"></i>Videos<span>26</span></li>
+        <li><i class="fa fa-tags"></i>Tags<span>100</span></li>
+      </ul>
+    </div>  
+  </div>
+</div>
+</body>
+</html>

@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="sanpham.css">
 	<link rel="stylesheet" type="text/css" href="css_thong_tin_duoi.css">
 	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
 		#tong{
 			background:	#AAAAAA;
 			width : 100% ;
@@ -28,15 +32,37 @@
 		$ma = $_GET['ma'] ;
 		$sql = "select * from san_pham
 		where ma = $ma";
-
+		$sql1 = "SELECT sum(so_luong) as so_luong 
+		FROM hoa_don_chi_tiet JOIN (SELECT * FROM hoa_don WHERE trang_thai = 1) AS a 
+		ON hoa_don_chi_tiet.ma_hoa_don = a.ma 
+		WHERE hoa_don_chi_tiet.ma_san_pham = '$ma'";
 		$ket_qua = mysqli_query($ket_noi,$sql) ;
-		$bai_san_pham = mysqli_fetch_array($ket_qua);?>
+		$ket_qua1 = mysqli_query($ket_noi,$sql1);
+		$da_ban = mysqli_fetch_array($ket_qua1);
+		$so_luong = $da_ban['so_luong'];
+		$bai_san_pham = mysqli_fetch_array($ket_qua);
+		if($bai_san_pham['anh'] == null){
+			header('location:../index.php');
+		}
+		
+		?>
+
 		<div id="giua">
 			<div class="vien_trai"></div>
 			<div class="san_pham">
 				<div class="thong_tin">
-					<div class="anh">
-						<img src="<?php echo $bai_san_pham['anh'] ?>" height="100%" width="100%">
+					<div class="anh" style="background-color: white;">
+					<p style="background-color: white;">
+					Đã bán: <?php if($so_luong == null){
+						echo 0;
+					} else{
+						echo $so_luong;
+					}
+					
+					?> 
+					</p>
+						<img src="<?php echo $bai_san_pham['anh'] ?>" height="95%" width="100%">
+						
 					</div>
 
 					<div class="thong_tin_chi_tiet">
@@ -62,7 +88,7 @@
 						</div>
 					</div> 
 					<div class="mo_ta_chi_tiet">
-					<h1>Mô tả chi tiết</h1>
+					<h1 style="padding-top: 300px;">Mô tả chi tiết</h1>
 					<h2><?php echo nl2br($bai_san_pham['mo_ta']) ?></h2>
 
 				</div>

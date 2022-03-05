@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])){
-    header('location:signin.php?error= Bạn chưa đăng nhập');
+    header('location:../signing/signin.php?error= Bạn chưa đăng nhập');
 }
 ?>
 <!DOCTYPE html>
@@ -160,7 +160,7 @@ ul li a:hover{
 		<div id="tren">
 			<div class="logo">
 				<a href="../index.php">
-					<h1 text-align="center" style="margin-left: 50px ;margin-top: 10px; color: red;">K1.Mark </h1>
+					<h1 text-align="center" style="margin-left: 50px ;margin-top: 10px; color: red;">KL.Mart </h1>
 				</a>
 			</div>
 			<div class="timkiem"></div>
@@ -182,14 +182,14 @@ ul li a:hover{
 							<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-128.png" height="35" title="Đăng ký">
 						</a>
 					<?php }else{ ?>
-						<a href="signing/signout.php">
+						<a href="../signing/signout.php">
 							<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng xuất">
 
 						</a>
 					<?php } ?>
 				</div>
 				<div class="Gio_hang">
-					<a href="giohang/xem.php">
+					<a href="../giohang/xem.php">
 						<img src="https://img.icons8.com/ios-filled/452/shopping-cart.png" height="35" title="Giỏ hàng">
 					</a>
 
@@ -204,79 +204,10 @@ ul li a:hover{
                 ?></h1>
                     <div>
                         <ul>
-                            <li><a href="user.php">Hồ sơ</a></li>
-                            <li><a href="don_mua.php">Đơn mua</a></li>
-                            <li><a href="doi_mat_khau.php">Đổi mật khẩu</a></li>
-                            <li id="log-out"><a href="signout.php">Đăng xuất</a></li>
+                            <li><a href="user_body_profile.php">Hồ sơ</a></li>
+                            <li><a href="user_body_bill.php">Đơn mua</a></li>
+                            <li><a href="user_body_change_password.php">Đổi mật khẩu</a></li>
+                            <li id="log-out"><a href="../signing/signout.php">Đăng xuất</a></li>
                         </ul>
                     </div>
             </div>
-            <div class="phai">
-            <?php
-    if(isset($_SESSION['message'])) { ?>
-
-        <?php   
-// PHP program to pop an alert   
-// message box on the screen   
-  // Function definition   
-  $message = $_SESSION['message'];
-function function_alert($message) {   
- // Display the alert box    
-    echo "<script type ='text/JavaScript'>";  
-    echo "alert('$message')";  
-    echo "</script>";   
-}   
-// Function call   
-function_alert($message);   
-  ?>  
-  <?php unset($_SESSION['message']); ?>
-        <?php } ?>
-        <?php 
-            $ma = $_SESSION['id'];
-            require '../connect.php';
-            $sql = "select * from khach_hang where ma = '$ma'";
-            $result = mysqli_query($ket_noi,$sql);
-            $user = mysqli_fetch_array($result);
-        ?>
-            <form action="process_update_user.php" method="post" style="text-align: center;">
-        <div id="form-top">
-            <div id="form-left">
-                        <ul>
-                            <li>Tên đăng nhập</li>
-                            <li>Tên</li>
-                            <li>Giới tính</li>
-                            <li>Số điện thoại</li>
-                            <li>Địa chỉ</li>
-                        </ul>
-            </div >
-                   <div id="form-right">
-                    
-                        <ul>
-                            <li><?php echo $user['email'] ?></li>
-                            <li><input type="text" value="<?php echo $user['ten'] ?>" name="name"></li>
-                            <li>
-                            <input type="radio" name="gender" value="nam" <?php echo ($user['gioi_tinh']=='nam')?'checked':'' ?> >Nam
-                            <input type="radio" name="gender" value="nữ" <?php echo ($user['gioi_tinh']=='nữ')?'checked':'' ?>>Nữ
-                            </li>
-                            <li><input type="number" name="phone_number" value="<?php echo $user['sdt']?>"></li>
-                            <li><input type="text" value="<?php echo $user['dia_chi'] ?>" name="address"></li>
-                        </ul>
-                    
-                    </div>
-        </div>
-                    <div id="btn">
-                    <button>Cập nhật thông tin</button>
-                    </div>
-            </form>
-            </div>
-            
-        </div>
-        <div id="duoi">
-            <?php 
-                require '../footer.php';
-            ?>
-        </div>
-</div>
-
-</body>
-</html>

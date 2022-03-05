@@ -13,7 +13,7 @@
 </head>
 <style type="text/css">
 	#tong{
-		height: 1400px;
+		height: 1300px;
 		width: 100%;
 	}
 	#giua{
@@ -44,7 +44,7 @@
 						</a>
 					<?php }else{ ?>
 			<br>
-			<a href="signing/user.php"> <?php echo "Xin chào, "; echo $_SESSION['name'];?> </a>
+			<a href="../user/user_body_profile.php"> <?php echo "Xin chào, "; echo $_SESSION['name'];?> </a>
 		<?php } ?>
 				</div>
 				<div class="dang_ky">
@@ -53,14 +53,14 @@
 							<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-128.png" height="35" title="Đăng ký">
 						</a>
 					<?php }else{ ?>
-						<a href="signing/signout.php">
+						<a href="../signing/signout.php">
 							<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng xuất">
 
 						</a>
 					<?php } ?>
 				</div>
 				<div class="Gio_hang">
-					<a href="giohang/xem.php">
+					<a href="xem.php">
 						<img src="https://img.icons8.com/ios-filled/452/shopping-cart.png" height="35" title="Giỏ hàng">
 					</a>
 
@@ -101,8 +101,11 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 							<?php echo $each['gia']; ?>
 						</div>	
 						<div class="name">
+							
 							Số lượng:
-						<?php echo $each['soluong'] ?>
+							 <a style=" color: black;" href="update_Sl_giam.php?id=<?php echo $id ?>">-</a>
+						 <?php echo $each['soluong'] ?>
+						 <a style=" color: black;" href="update_Sl_them.php">+</a>
 						</div>	
 						<br>
 						<br>
@@ -111,7 +114,7 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 						
 						</div>
 		<?php } ?>
-		<?php $sum +=$each['soluong']*$each['gia'] ?>
+		<?php  $sum +=$each['soluong']*$each['gia']; ?>
 	<?php }?>
 							
 				<?php  for($i=1; $i<=$so_trang ; $i++) { 
@@ -158,7 +161,7 @@ Ghi chú
 <?php } ?>
 <?php } else{?>
 	<h3 style="text-align: center;">
-		<a style=" color: green;" href="xem_don_da_dat.php"> Xem đơn hàng đã đặt </a>
+		<a style=" color: green;" href="../user/user_body_bill.php"> Xem đơn hàng đã đặt </a>
 	</h3>
 	<h1 style="text-align: center;">Giỏ hàng trống vui lòng quay trở lại trang chủ để mua hàng </h1>
 <?php } ?>

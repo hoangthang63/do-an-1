@@ -34,22 +34,23 @@
 <body>
 <?php require 'phantren.php' ?>
 <?php
-    if(isset($_GET['error']))
-    {
-        echo $_GET['error'];
-    }
-?>
+    if(isset($_GET['error'])) { ?>
+        <p style="color: red"> <?php echo $_GET['error']; ?> </p>
+        <?php } ?>
+
 <div class="container">
             <div class="login-form">
                 <form action="process_signin.php" method="post">
                     <h1>Đăng nhập vào website</h1>
                     <div class="input-box">
                         <i ></i>
-                        <input type="email" name="email" placeholder="Nhập email">
+                        <input type="email" name="email" placeholder="Nhập email" id="email">
+                        <span style="color : red" class="span_loi" id="loi_email"></span>
                     </div>
                     <div class="input-box">
                         <i ></i>
-                         <input type="password" name="password" placeholder="Nhập mật khẩu">
+                         <input type="password" name="password" placeholder="Nhập mật khẩu" id="mat_khau">                         
+                         <span style="color : red" class="span_loi" id="loi_mat_khau"></span>
                     </div>
                     <div>
                         Ghi nhớ đăng nhập<input type="checkbox" name="remember">
@@ -66,7 +67,7 @@
                       
                    
                     <div class="btn-box">
-                        <button type="submit">
+                        <button  onclick="return kiem_tra()">
                             Đăng nhập
                         </button>
                     </div>
@@ -81,9 +82,43 @@
             </div>
         </main>
         
+
            
-           <?php require '../footer.php' ?>
 
 </form>
+<script> 
+
+   
+function kiem_tra(){
+let kiem_tra_loi = false;
+              let email = document.getElementById('email').value;
+    if(email.length === 0)
+    {
+        document.getElementById('loi_email').innerHTML = 'Email không được để trống';
+        kiem_tra_loi = true;
+    }else{
+        document.getElementById('loi_email').innerHTML = '';
+    }
+
+    let mat_khau = document.getElementById('mat_khau').value;
+    if(mat_khau.length === 0)
+    {
+        document.getElementById('loi_mat_khau').innerHTML = 'Mật khẩu không được để trống';
+        kiem_tra_loi = true;
+    }else if(mat_khau.length < 8)
+    {
+        document.getElementById('loi_mat_khau').innerHTML = 'Mật khẩu không được ít hơn 8 ký tự';
+        kiem_tra_loi = true;
+    }
+    else{
+        document.getElementById('loi_mat_khau').innerHTML = '';
+    }
+    if(kiem_tra_loi){
+        return false;
+    }
+}
+ 
+        </script>
+        <?php require '../footer.php' ?>
 </body>
 </html>

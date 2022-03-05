@@ -31,5 +31,5 @@ $id = mysqli_fetch_array($result);
 session_start();
 $_SESSION['id'] = $id;
 $_SESSION['name'] = $ten;
-
+header('location:../index.php');
 mysqli_close($ket_noi);
