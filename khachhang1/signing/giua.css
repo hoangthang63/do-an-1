@@ -19,36 +19,45 @@ main{
     min-height: 650px;
     padding: 7.5px 15px;
 }
-	#duoi{
-		width :100% ;
-		height :180px;
-		background :#333333;
-		color: white;
+#duoi{
+    width :100% ;
+    height :100px;
+    background :#333333;
+    color: white;
+    /* height: 15%; */
 
-	}
-	
-	#duoi >.Thong_tin{
-		
-		width: 30% ;
-		float: left;
-		height: 100%;
-		text-align: left;
-	}
-	#duoi >.Bao_Hanh{
-		
-		width: 40% ;
-		height: 100%;
-		float: left;
-		text-align: left;
-	}
-	#duoi >.Doi_tac{
-		
-		width: 30% ;
-		float: left;
-		height: 100%;
-		text-align: left;
+}
 
-	}
+#duoi >.Thong_tin{
+    
+    width: 30% ;
+    float: left;
+    height: 100%;
+    text-align: left;
+}
+#duoi >.Bao_Hanh{
+    
+    width: 40% ;
+    height: 100%;
+
+}
+#duoi >.Doi_tac{
+    
+    width: 30% ;
+    /* float: left; */
+    height: 100%;
+
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    float: left;
+}
+ul {
+    list-style: none;
+}
 	a{
 		text-decoration: none;
 		color: white;

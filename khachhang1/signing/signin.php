@@ -56,14 +56,9 @@
                         Ghi nhớ đăng nhập<input type="checkbox" name="remember">
                     </div>
                   
-                    <select name="hinh_thuc">
-                        <option >
-                        Khách Hàng    
-                        </option>
-                        <option>
-                        Nhân Viên       
-                        </option>
-                    </select>
+<br>
+<br>
+<br>
                       
                    
                     <div class="btn-box">

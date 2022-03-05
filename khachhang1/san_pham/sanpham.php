@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,50 @@
 </head>
 <body>
 	<div id="tong" >
-		<?php include '../search_sign.php' ?>
+	<div id="tren">
+	<div class="logo">
+		<a href="../index.php">
+			<h1 text-align="center" style="margin-left: 50px ;margin-top: 10px; color: red;">KL.Mart </h1>
+		</a>
+	</div>
+	<div class="timkiem">
+
+	</div>
+
+	<div class="dang_nhap">
+		<div class="dangnhap">
+			<?php if(!isset($_SESSION['id'])){ ?>
+			<a href="signing/signin.php">
+				<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng nhập">
+
+			</a>
+		<?php }else{ ?>
+			<br>
+			<a href="../user/user_body_profile.php"> <?php echo "Xin chào, "; echo $_SESSION['name'];?> </a>
+		<?php } ?>
+		</div>
+		<div class="dang_ky">
+			<?php if(!isset($_SESSION['id'])){ ?>
+				
+			<a href="signing/signup.php">
+				<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-128.png" height="35" title="Đăng ký">
+			</a>
+			<?php }else{ ?>
+			<a href="../signing/signout.php">
+				<img src="https://cdn-icons-png.flaticon.com/512/747/747335.png" height="35" title="Đăng xuất">
+
+			</a>
+		<?php } ?>
+		</div>
+		<div class="Gio_hang">
+			<a href="../giohang/xem.php">
+				<img src="https://img.icons8.com/ios-filled/452/shopping-cart.png" height="35" title="Giỏ hàng">
+			</a>
+
+		</div>
+
+	</div>
+</div>
 
 		<?php 
 
@@ -73,18 +117,11 @@
 
 						<div class="Gia">Giá : <?php echo $bai_san_pham['gia'] ?> đ</div>
 						<div class="submit">
-							<div class="add_gio_hang">
+							<div style=" background: green;" class="add_gio_hang">
 								<br>
-								<a href="../giohang/add_cart.php?id=<?php echo $ma ?>">Thêm vào giỏ hàng</a>
+								<a style="color: white;" href="../giohang/add_cart.php?id=<?php echo $ma ?>">Thêm vào giỏ hàng</a>
 							</div>
-							<div class="dat_hang">
-								<br>
-								<a href="#">
-
-
-									Đặt Hàng
-								</a>
-							</div>
+							
 						</div>
 					</div> 
 					<div class="mo_ta_chi_tiet">

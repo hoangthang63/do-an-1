@@ -15,8 +15,10 @@
         #tong 
         {
             width: 100%;
-            height: 2510px
+            height: 2510px;
+            background: #EEEEEE;
         }
+
         .timkiem input[class="tim_kiem"] {
             width: 70%;
             box-sizing: border-box;
@@ -38,6 +40,13 @@
             width: 150px;
             text-align: center;
         } 
+        #duoi{
+            width :100% ;
+		height :4%;
+		background :#333333;
+		color: white;
+		margin-top:122px;
+        }
     </style>
 </head>
 

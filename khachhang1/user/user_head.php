@@ -173,7 +173,7 @@ ul li a:hover{
 						</a>
 					<?php }else{ ?>
 			<br>
-			<a href="signing/user.php"> <?php echo "Xin chào, "; echo $_SESSION['name'];?> </a>
+			<a href="user_body_profile.php"> <?php echo "Xin chào, "; echo $_SESSION['name'];?> </a>
 		<?php } ?>
 				</div>
 				<div class="dang_ky">
