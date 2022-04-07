@@ -13,4 +13,4 @@ mysqli_query($ket_noi,$sql);
 $loi = mysqli_error($ket_noi); // in ra lỗi 
 echo $loi;
 mysqli_close($ket_noi);	
-header('location:nhaxuatban_list.php');
+header('location:nhaxuatbanadd.php');
