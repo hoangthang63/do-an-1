@@ -93,7 +93,7 @@
 					<?php foreach($ket_qua as $tung_san_pham){ ?>
 						  <div class="mat_hang">
 							<a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
-								<img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
+								<img src="<?php echo $tung_san_pham['anh'] ?> " width=  "230px";  height= "220px">
 								<div class="name">
 									<?php echo $tung_san_pham['ten'] ?>
 								</div>

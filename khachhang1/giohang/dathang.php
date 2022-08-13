@@ -10,7 +10,11 @@ $cart = $_SESSION['cart'];
 $tong_tien = 0;
 foreach ($cart as $each) {
 $tong_tien += $each['soluong']*$each['gia'];
-
+}
+if($tong_tien == 0){
+    $_SESSION['error'] = "Giỏ hàng của bạn chưa có sản phẩm nào!";
+	header('location:../index.php');
+	exit;
 }
 $ma_khach_hang = $_SESSION['id'];
 $trang_thai = 0;

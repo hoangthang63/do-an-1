@@ -16,10 +16,10 @@
 <body>
 <?php require 'phantren.php' ?>
 <?php
-session_start();
+    session_start();
     if(isset($_SESSION['error']))
     {
-        echo $_SESSION['error'];
+        echo  $_SESSION['error'];
         unset($_SESSION['error']);
     }
 ?>

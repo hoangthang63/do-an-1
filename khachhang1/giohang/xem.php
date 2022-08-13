@@ -89,6 +89,7 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 		<div id="giua">
 			<div class="vien_trai"></div>
 			<div class="giua">
+				
 			<?php foreach ($cart as $ma => $each){ $i++; 
 		if($i>$bo_qua && $i <= ($bo_qua + $so_san_pham_1)){?>	
 				<div class="mat_hang">	
@@ -105,15 +106,21 @@ $bo_qua = $so_san_pham_1*($trang - 1);
 							<?php echo $each['gia']; ?>
 						</div>	
 						<div class="name">
-							
 							Số lượng:
-							 <a style=" color: black;" href="update_Sl_giam.php?id=<?php echo $id ?>">-</a>
-						 <?php echo $each['soluong'] ?>
-						 <a style=" color: black;" href="update_Sl_them.php">+</a>
+							<br>
+							<a style=" font-size: 1rem; color: black;" href="update_Sl_giam.php?id=<?php echo $ma ?>"> <span> -</span> </a>							
+							<?php  echo $each['soluong'] ?>	
+							<a style="font-size: 1rem; color: black; position: relative; right: -25px;" href="update_Sl_them.php?id=<?php echo $ma ?>">  + </a>
 						</div>	
 						<br>
 						<br>
 						<div class="name">Tổng tiền: <?php echo $each['soluong']*$each['gia'] ?></div>
+						<br>
+						<br>
+						<br>
+						
+						
+						<a style="color: red;position: relative; right: -50px;" href="delete.php?id=<?php echo $ma ?>">Xoá</a>
 						</div >
 						
 						</div>
@@ -164,10 +171,11 @@ Ghi chú
 <h1>	Vui lòng đăng nhập để đặt hàng</h1>
 <?php } ?>
 <?php } else{?>
-	<h3 style="text-align: center;">
-		<a style=" color: green;" href="../user/user_body_bill.php"> Xem đơn hàng đã đặt </a>
-	</h3>
 	<h1 style="text-align: center;">Giỏ hàng trống vui lòng quay trở lại trang chủ để mua hàng </h1>
+	<h3 style="text-align: center; ">
+		<a style=" color: green; margin-left:500px;" href="../user/user_body_bill.php"> Xem đơn hàng đã đặt </a>
+	</h3>
+	
 <?php } ?>
 </div>
 					</div>
@@ -181,9 +189,6 @@ Ghi chú
 			<?php require '../footer.php' ?>
 		
 	</div>
-
-
-
 </body>
 </html>
 

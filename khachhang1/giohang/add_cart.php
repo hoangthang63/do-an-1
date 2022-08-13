@@ -1,8 +1,8 @@
 <?php 
 
 session_start();
-
-$ma = $_GET['id'];
+if(isset($_SESSION['id'])){ 
+    $ma = $_GET['id'];
 if(empty($_SESSION['cart'][$ma])){
     require '../connect.php';
     $sql = "select * from san_pham where ma = '$ma'";
@@ -19,3 +19,8 @@ else{
 }
 header('location:../index.php');
 // echo json_encode($_SESSION['cart']);
+}else
+{
+    $_SESSION['error'] = "Vui lòng đăng nhập để đặt hàng";
+    header('location:../signing/signin.php');
+}

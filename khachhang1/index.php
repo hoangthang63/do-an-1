@@ -47,6 +47,11 @@
 		color: white;
 		margin-top:122px;
         }
+     .mat_hang >   img {
+    float: left;
+    
+    object-fit: cover;
+}
     </style>
 </head>
 
@@ -56,6 +61,13 @@
         <?php include 'search_sign.php' ?>
         <?php include 'san_pham/danh_muc.php' ?>
         <?php  require_once 'connect.php';  ?>
+        <?php
+    if(isset($_SESSION['error']))
+    { ?>
+    <p style="color: red"> <?php echo  $_SESSION['error']; ?> </p>
+        
+    <?php unset($_SESSION['error']); ?>
+        <?php }?>
         <?php  
         /*
     $trang = 1;
@@ -110,7 +122,7 @@
 
                         <div class="mat_hang">
                             <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
-                                <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
+                                <img src="<?php echo $tung_san_pham['anh'] ?> "  width=  "230px";  height= "220px">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
                                 </div>
@@ -143,7 +155,7 @@
 
                         <div class="mat_hang">
                             <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
-                                <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
+                                <img src="<?php echo $tung_san_pham['anh'] ?> " width=  "230px";  height= "220px">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
                                 </div>
@@ -175,7 +187,7 @@
 
                         <div class="mat_hang">
                             <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
-                                <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
+                                <img src="<?php echo $tung_san_pham['anh'] ?> " width=  "230px";  height= "220px">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
                                 </div>
@@ -207,7 +219,7 @@
 
                         <div class="mat_hang">
                             <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
-                                <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
+                                <img src="<?php echo $tung_san_pham['anh'] ?> " width=  "230px";  height= "220px">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
                                 </div>
@@ -239,7 +251,7 @@
 
                         <div class="mat_hang">
                             <a href="san_pham/sanpham.php?ma=<?php echo $tung_san_pham['ma'] ?>">
-                                <img src="<?php echo $tung_san_pham['anh'] ?> " height="70%" width="100%">
+                                <img src="<?php echo $tung_san_pham['anh'] ?> " width=  "230px";  height= "220px">
                                 <div class="name">
                                     <?php echo $tung_san_pham['ten'] ?>
                                 </div>

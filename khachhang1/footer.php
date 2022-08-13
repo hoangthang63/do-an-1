@@ -3,8 +3,16 @@
 <div id="duoi">
             <div class="Thong_tin">
                 <ul>
-                    <li> Số điện thoại: <a type="tel:0123456789">0123456789</a></li>
-                    <li> Email: <a type="mailto:foodievietnam@gmail.com">foodievietnam@gmail.com</a></li>
+                <a type="tel:0123456789">
+                    <li> 
+                    Số điện thoại: 012345678
+                    </li>
+                </a> 
+                <br>
+                <a type="mailto:foodievietnam@gmail.com">
+                    <li> Email: foodievietnam@gmail.com</li>
+            </a>
+            <br>
                     <li>  Trụ sở Hà Nội: 69 Trần Duy Hưng - Đống Đa - Hà Nội</li>
                    
                        
@@ -12,10 +20,8 @@
 
                 <div class="Thanh toan"></div>
             </div>
-            <div class="Bao_Hanh"> 
-              
-            </div>
-            <div class="Doi_tac">
+
+            <div style="align-items: flex-end;">
 
 
                         <h4>Follow Page tại:</h4>

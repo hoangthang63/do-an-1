@@ -204,7 +204,7 @@ ul li a:hover{
                 ?></h1>
                     <div>
                         <ul>
-                            <li><a href="user_body_profile.php">Hồ sơ</a></li>
+                            <li><a href="user_body_profile.php">Hồ sơ cá nhân</a></li>
                             <li><a href="user_body_bill.php">Đơn mua</a></li>
                             <li><a href="user_body_change_password.php">Đổi mật khẩu</a></li>
                             <li id="log-out"><a href="../signing/signout.php">Đăng xuất</a></li>

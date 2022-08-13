@@ -37,6 +37,23 @@
     if(isset($_GET['error'])) { ?>
         <p style="color: red"> <?php echo $_GET['error']; ?> </p>
         <?php } ?>
+<?php
+    if(isset($_SESSION['success']))
+    { ?>
+    <p style="color: green"> <?php echo  $_SESSION['success']; ?> </p>
+        
+    <?php unset($_SESSION['success']); ?>
+        <?php }?>
+
+        <?php
+    if(isset($_SESSION['error']))
+    { ?>
+    <p style="color: red"> <?php echo  $_SESSION['error']; ?> </p>
+        
+    <?php unset($_SESSION['error']); ?>
+        <?php }?>
+
+        
 
 <div class="container">
             <div class="login-form">
@@ -81,6 +98,12 @@
            
 
 </form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <script> 
 
    
